@@ -1,113 +1,166 @@
-import Image from "next/image";
+"use client";
+//import * as _ from "lodash";
+import HeroSection from "@/components/Layout/HeroSection";
+import Link from "next/link";
+//import reactIcon from "./images/React-icon.png";
+
+//const reactIcon = require('./images/portfolio.png')
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <section>
+      <HeroSection />
+      <div className="flex flex-col w-full min-h-screen h-full items-center mt-24">
+        <div className="text-lg">Welcome! these are my</div>
+        <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
+        <div className="grid grid-cols-2 gap-x-8 mt-16">
+          <div className="flex flex-col items-center">
+            <Link
+              href="/"
+              className="w-[50vh] lowercase h-[25vh] box absolute z-10 opacity-0 flex items-center justify-center hover:cursor-pointer text-6xl hover:opacity-100 transition duration-200 ease-in bg-black"
+            >
+              Visit
+            </Link>
+            <div className="w-[50vh] h-[25vh] box bg-[length:50vh_25vh] bg-no-repeat bg-[url('./images/portfolio.png')] bg-white"></div>
+            <h1 className="mt-2 text-xl font-semibold">My Portfolio</h1>
+            <p className="w-[50vh]">
+              My personal website that contains my information and projects.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <Link
+              href="https://leweprojects.github.io/MGHsite/#/"
+              className="w-[50vh] lowercase h-[25vh] box absolute z-10 opacity-0 flex items-center justify-center hover:cursor-pointer text-6xl hover:opacity-100 transition duration-200 ease-in bg-black"
+            >
+              Visit
+            </Link>
+            <div className="w-[50vh] h-[25vh] box bg-[length:50vh_25vh] bg-no-repeat bg-[url('./images/MGHsite.png')] bg-white"></div>
+            <h1 className="mt-2 text-xl font-semibold">
+              MGH appointment website
+            </h1>
+            <p>A website made for our capstone project.</p>
+          </div>
+        </div>
+        <div className="text-lg mt-28">These are my</div>
+        <h1 className="w-fit font-semibold text-5xl">TECH-STACKS</h1>
+        <div className="mt-10">
+          <ul className="stack grid grid-cols-4 gap-x-3 gap-y-5 text-xl items-end">
+            <li>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                className="w-16"
+                alt="logo"
+              />
+              ReactJS
+            </li>
+            <li>
+              <img
+                src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"
+                className="w-16"
+                alt="logo"
+              />
+              Node.JS
+            </li>
+            <li>
+              <img
+                src="https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png"
+                className="w-16"
+                alt="logo"
+              />
+              NextJS
+            </li>
+            <li>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                className="w-16"
+                alt="logo"
+              />
+              JavaScript
+            </li>
+            <li>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+                className="w-16"
+                alt="logo"
+              />
+              TypeScript
+            </li>
+            <li>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/732/732212.png"
+                className="w-16"
+                alt="logo"
+              />
+              HTML5
+            </li>
+            <li>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
+                className="w-16"
+                alt="logo"
+              />
+              CSS3
+            </li>
+            <li>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png"
+                className="w-20 mb-1"
+                alt="logo"
+              />
+              TailwindCSS
+            </li>
+            <li>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png"
+                className="w-14"
+                alt="logo"
+              />
+              SVELTE
+            </li>
+            <li>
+              <img
+                src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png"
+                className="w-16"
+                alt="logo"
+              />
+              Supabase
+            </li>
+            <li>
+              <img
+                src="https://cdn.freebiesupply.com/logos/large/2x/mysql-5-logo-svg-vector.svg"
+                className="w-16 bg-white"
+                alt="logo"
+              />
+              MySQL
+            </li>
+            <li>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png"
+                className="w-14"
+                alt="logo"
+              />
+              Figma
+            </li>
+          </ul>
+        </div>
+        <h1 className="w-fit font-semibold text-5xl mt-28 mb-10">ABOUT ME</h1>
+        <div className="w-[60%] text-justify mb-20 text-lg whitespace-break-spaces">
+          Hello, my name is <span className="text-cyan-300 italic">Marvell</span>, a 4th year graduating college student with
+          enough knowledge to develop a website. I have a full-stack experience
+          from creating a website with various tech stacks using react, node, tailwind,
+          figma, javaScript, typeScript, NextJS, svelte and
+          supabase. My area of knowledge specializes in back-end and front-end programming.
+          <br /><br />
+          Along with my technical expertise, I approach every project with a collaborative 
+          perspective and excellent problem-solving skills. I like collaborating closely with
+           cross-functional teams to comprehend project specifications and provide solutions
+            that go above and beyond. I am dedicated to providing top-notch software solutions
+             that promote corporate success, and I am committed for lifelong learning and keeping
+              up with current industry trends.
+
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </section>
   );
 }
