@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <section>
       <HeroSection />
-      <div className="flex flex-col w-full min-h-screen h-full items-center mt-24">
+      <div className="flex flex-col w-full min-h-screen h-full items-center mt-24 tracking-wider">
         <div className="text-lg">Welcome! these are my</div>
         <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
         <div className="grid grid-cols-2 gap-x-8 mt-16">
@@ -145,7 +145,7 @@ export default function Home() {
           </ul>
         </div>
         <h1 className="w-fit font-semibold text-5xl mt-28 mb-10">ABOUT ME</h1>
-        <div className="w-[60%] text-justify mb-20 text-lg whitespace-break-spaces">
+        <div className="w-[60%] text-justify tracking-wider mb-20 text-lg whitespace-break-spaces">
           Hello, my name is <span className="text-cyan-300 italic">Marvell</span>, a 4th year graduating college student with
           enough knowledge to develop a website. I have a full-stack experience
           from creating a website with various tech stacks using react, node, tailwind,
