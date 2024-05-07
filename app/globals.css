@@ -58,3 +58,20 @@ body{
         @apply mb-2
     }
 }
+@media (max-width: 375px) {
+    .hero {
+        @apply text-[23px]
+    }
+    .heroContainer{
+        @apply w-full
+    }
+    .projects {
+        @apply grid-cols-1 gap-y-10
+    }
+    .projImage {
+        @apply w-[43vh] h-[20vh] bg-[length:43vh_20vh]
+    }
+    .des {
+        @apply text-sm w-fit
+    }
+}

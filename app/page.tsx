@@ -39,7 +39,7 @@ export default function Home() {
             <h1 className="mt-2 text-xl font-semibold">
               MGH appointment website
             </h1>
-            <p>A website made for our capstone project.</p>
+            <p className="des">A website made for our capstone project.</p>
           </div>
         </div>
         <div className="text-lg mt-28">These are my</div>
