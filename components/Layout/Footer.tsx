@@ -11,12 +11,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 const Footer = () => {
   return (
-    <div className="w-full bg-zinc-900 py-10 grid grid-cols-2 px-28 justify-center">
+    <div className="w-full footerContainer bg-zinc-900 py-10 grid grid-cols-2 px-28 justify-center">
       <div className="contacts">
         <h1 className="text-2xl font-semibold mb-5">CONTACTS</h1>
         <ul className={inter.className}>
           <li>
-            <MdEmail className="text-2xl" />
+            <MdEmail className="icon text-2xl" />
             <p> loewiayon12@gmail.com</p>
           </li>
           <li>
@@ -26,7 +26,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="medias text-right">
-        <h1 className="text-2xl font-semibold mb-5 uppercase">Social Medias</h1>
+        <h1 className="text-2xl font-semibold mb-5 med uppercase">Social Medias</h1>
         <ul className={`${inter.className} flex justify-end space-x-5`}>
           <div className="">
             <Link href="https://www.facebook.com/marvellloewi.ayon/" className="li">

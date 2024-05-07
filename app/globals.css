@@ -20,3 +20,41 @@ body{
 .medias ul .li{
     @apply flex whitespace-break-spaces my-3 space-x-2 items-center
 }
+@media (max-width: 452px) {
+    .hero{
+        @apply text-[27px] whitespace-nowrap
+    }
+    .heroContainer {
+        @apply flex px-10
+    }
+    .projects {
+        @apply grid-cols-1 gap-y-10
+    }
+    .projImage {
+        @apply w-[43vh] h-[20vh] bg-[length:43vh_20vh]
+    }
+    .des {
+        @apply text-center
+    }
+    .tech {
+        @apply text-4xl
+    }
+    .stack {
+        @apply grid-cols-3 text-lg
+    }
+    .about{
+        @apply text-base w-[90%]
+    }
+    .footerContainer{
+        @apply grid-cols-1 px-3 items-center flex flex-col space-y-10
+    }
+    .footerContainer ul li{
+        @apply flex items-center
+    }
+    .medias{
+        @apply text-center
+    }
+    .med{
+        @apply mb-2
+    }
+}
