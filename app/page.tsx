@@ -7,14 +7,23 @@ import reactIcon from "./images/React-icon.png";
 
 //const reactIcon = require('./images/portfolio.png')
 
-export default function Home() {
+function Home() {
+  // export function scroll(): void {
+  //   if(isHome) {
+  //     home.current?.scrollIntoView({ behavior: 'smooth'})
+  //   }
+  // }
+
   return (
     <section>
-      <HeroSection />
+      <div id="hero">
+       <HeroSection /> 
+      </div>
+      
       <div className="flex flex-col w-full min-h-screen h-full items-center mt-24 tracking-wider">
         <div className="text-lg">Welcome! these are my</div>
         <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
-        <div className="projects grid grid-cols-2 gap-x-8 mt-16">
+        <div id="projects" className="projects grid grid-cols-2 gap-x-8 mt-16">
           <div className="flex flex-col items-center">
             <Link
               href="/"
@@ -44,7 +53,7 @@ export default function Home() {
         </div>
         <div className="text-lg mt-28">These are my</div>
         <h1 className="w-fit font-semibold text-5xl tech">TECH-STACKS</h1>
-        <div className="mt-10">
+        <div id="stack" className="mt-10">
           <ul className="stack grid grid-cols-4 gap-x-3 gap-y-5 text-xl items-end">
             <li>
               <Image
@@ -105,7 +114,7 @@ export default function Home() {
                 alt="logo"
               />
               HTML5
-            </li> 
+            </li>
             <li>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
@@ -169,7 +178,7 @@ export default function Home() {
           </ul>
         </div>
         <h1 className="w-fit font-semibold text-5xl mt-28 mb-10">ABOUT ME</h1>
-        <div className="w-[60%] about text-justify tracking-wider mb-20 text-lg whitespace-break-spaces">
+        <div id="about" className="w-[60%] about text-justify tracking-wider mb-20 text-lg whitespace-break-spaces">
           Hello, my name is{" "}
           <span className="text-cyan-300 italic">Marvell</span>, a 4th year
           graduating college student with enough knowledge to develop a website.
@@ -191,3 +200,4 @@ export default function Home() {
     </section>
   );
 }
+export default Home;

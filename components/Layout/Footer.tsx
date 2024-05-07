@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const Footer = () => {
   return (
-    <div className="w-full footerContainer bg-zinc-900 py-10 grid grid-cols-2 px-28 justify-center">
+    <div id="contacts" className="w-full footerContainer bg-zinc-900 py-10 grid grid-cols-2 px-28 justify-center">
       <div className="contacts">
         <h1 className="text-2xl font-semibold mb-5">CONTACTS</h1>
         <ul className={inter.className}>

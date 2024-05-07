@@ -23,7 +23,7 @@ export default function RootLayout({
         <title>MARVELL</title>
       </head>
       <body className={inter.className}>
-        {/* <Head /> */}
+        <Head />
         <main>
           {children}
           <Analytics />
