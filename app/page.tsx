@@ -2,8 +2,8 @@
 //import * as _ from "lodash";
 import HeroSection from "@/components/Layout/HeroSection";
 import Image from "next/image";
-import Link from "next/link";
 import reactIcon from "./images/React-icon.png";
+import Projects from "@/components/Layout/Projects";
 
 //const reactIcon = require('./images/portfolio.png')
 
@@ -23,34 +23,7 @@ function Home() {
       <div className="flex flex-col w-full min-h-screen h-full items-center mt-24 tracking-wider">
         <div className="text-lg">Welcome! these are my</div>
         <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
-        <div id="projects" className="projects grid grid-cols-2 gap-x-8 mt-16">
-          <div className="flex flex-col items-center">
-            <Link
-              href="/"
-              className="w-[50vh] lowercase h-[25vh] projImage box absolute z-10 opacity-0 flex items-center justify-center hover:cursor-pointer text-6xl hover:opacity-100 transition duration-200 ease-in bg-black"
-            >
-              Visit
-            </Link>
-            <div className="w-[50vh] h-[25vh] projImage box bg-[length:50vh_25vh] bg-no-repeat bg-[url('./images/portfolio.png')] bg-white"></div>
-            <h1 className="mt-2 text-xl font-semibold">My Portfolio</h1>
-            <p className="w-[50vh] des">
-              My personal website that contains my information and projects.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <Link
-              href="https://leweprojects.github.io/MGHsite/#/"
-              className="w-[50vh] lowercase h-[25vh] projImage box absolute z-10 opacity-0 flex items-center justify-center hover:cursor-pointer text-6xl hover:opacity-100 transition duration-200 ease-in bg-black"
-            >
-              Visit
-            </Link>
-            <div className="w-[50vh] h-[25vh] projImage box bg-[length:50vh_25vh] bg-no-repeat bg-[url('./images/MGHsite.png')] bg-white"></div>
-            <h1 className="mt-2 text-xl font-semibold">
-              MGH appointment website
-            </h1>
-            <p className="des">A website made for our capstone project.</p>
-          </div>
-        </div>
+        <Projects/>
         <div className="text-lg mt-28">These are my</div>
         <h1 className="w-fit font-semibold text-5xl tech">TECH-STACKS</h1>
         <div id="stack" className="mt-10">
@@ -73,7 +46,7 @@ function Home() {
                 className="w-16"
                 alt="logo"
               />
-              Node.JS
+              Node.js
             </li>
             <li>
               <img

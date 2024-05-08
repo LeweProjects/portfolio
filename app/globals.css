@@ -11,6 +11,9 @@ body{
 .box1{
     clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
 }
+.box2{
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
 .stack li{
     @apply flex flex-col text-center items-center
 }
@@ -19,6 +22,12 @@ body{
 }
 .medias ul .li{
     @apply flex whitespace-break-spaces my-3 space-x-2 items-center
+}
+.projectDetails img{
+    @apply w-12 
+}
+.tw img{
+    @apply w-16
 }
 @media (max-width: 452px) {
     .hero{
@@ -57,6 +66,9 @@ body{
     .med{
         @apply mb-2
     }
+    .head {
+        @apply text-sm
+    }
 }
 @media (max-width: 375px) {
     .hero {
@@ -73,5 +85,8 @@ body{
     }
     .des {
         @apply text-sm w-fit
+    }
+    .head {
+        @apply text-xs
     }
 }
