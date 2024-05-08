@@ -180,11 +180,11 @@ function Home() {
         <h1 className="w-fit font-semibold text-5xl mt-28 mb-10">ABOUT ME</h1>
         <div id="about" className="w-[60%] about text-justify tracking-wider mb-20 text-lg whitespace-break-spaces">
           Hello, my name is{" "}
-          <span className="text-cyan-300 italic">Marvell</span>, a 4th year
-          graduating college student with enough knowledge to develop a website.
-          I have a full-stack experience from creating a website with various
-          tech stacks using react, node, tailwind, figma, javaScript,
-          typeScript, NextJS, svelte and supabase. My area of knowledge
+          <span className="text-cyan-300 italic">Marvell</span>, a 22 years old
+          with a Bachelor's Degree of Science in Information and Technolgy.
+          I have enough knowledge to develop a website with a full-stack experience
+          from creating a webapp with various tech stacks using react, node, tailwind
+          , figma, javaScript, typeScript, NextJS, svelte and supabase. My area of knowledge
           specializes in back-end and front-end programming.
           <br />
           <br />
