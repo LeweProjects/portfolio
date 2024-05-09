@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // "compilerOptions": {
-  //   "allowImportingTsExtensions": true
+  //   "allowImportingTsExtensions": "iKnowWhatImDoing"
   // }
 };
 
