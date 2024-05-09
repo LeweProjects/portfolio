@@ -99,12 +99,11 @@ const Projects = () => {
           </div>
         </div>
         <div
+          onClick={openDetails}
           className="text-2xl py-2 px-6 hover:bg-gray-500 select-none cursor-pointer
          box2 flex justify-center mt-5 transition duration-200 ease-in-out"
         >
-          <p onClick={openDetails}>
-            {showDetails ? "hide <<" : "more details >>"}
-          </p>
+          <p>{showDetails ? "hide <<" : "more details >>"}</p>
         </div>
       </div>
       <div className="flex flex-col items-center">
@@ -197,12 +196,11 @@ const Projects = () => {
           </div>
         </div>
         <div
+          onClick={openDetails1}
           className="text-2xl py-2 px-6 hover:bg-gray-500 select-none cursor-pointer
          box2 flex justify-center mt-5 transition duration-200 ease-in-out"
         >
-          <p onClick={openDetails1}>
-            {showDetails1 ? "hide <<" : "more details >>"}
-          </p>
+          <p>{showDetails1 ? "hide <<" : "more details >>"}</p>
         </div>
       </div>
     </div>
