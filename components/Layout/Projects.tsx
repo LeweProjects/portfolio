@@ -149,6 +149,8 @@ const Projects = () => {
             <div className="tw flex flex-col items-center">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png"
+                width={500}
+                height={500}
                 className="tw"
                 alt="logo"
               />
