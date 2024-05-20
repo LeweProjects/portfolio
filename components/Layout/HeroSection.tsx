@@ -45,10 +45,16 @@ const HeroSection = () => {
       }}
     >
       <div className="w-full min-h-[56.1rem] flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25">
-        <div className="relative -mt-20">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, type: "spring" }}
+          className="relative -mt-20"
+        >
           <div className="border-4 border-white rounded-full p-[68px] absolute ml-[56px] mt-[56px]" />
           <div className="border-4 border-white rounded-full p-9 absolute ml-[87px] mt-[87px] bg-white" />
           <IoCodeSlashOutline className="text-5xl text-black ml-[104px] mt-[104px] absolute" />
+
           <motion.svg
             animate={{ rotate: 360 }}
             transition={{ duration: 8, ease: "linear", repeat: Infinity }}
@@ -69,7 +75,7 @@ const HeroSection = () => {
               </textPath>
             </text>
           </motion.svg>
-        </div>
+        </motion.div>
         <motion.div
           initial={{
             x: "var(--x-initial-top-lightblue)",
@@ -187,7 +193,7 @@ const HeroSection = () => {
         <motion.div
           initial="hidden"
           animate="visible"
-          transition={{ staggerChildren: 0.09, type: "spring" }}
+          transition={{ staggerChildren: 0.09, type: "spring", delayChildren: 0.4 }}
           className={`${inter.className} hero 
           text-7xl -mt-8 text-center  leading-tight`}
         >
@@ -223,6 +229,9 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
         <motion.button
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, type: "spring", delay: 4 }}
           onClick={() => scrollTo("projects")}
           className="viewButton flex items-center mt-10 px-6 py-4 border-[3px] text-2xl font-normal"
         >

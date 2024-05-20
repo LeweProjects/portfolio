@@ -162,7 +162,7 @@ const Home = () => {
           className="w-[60%] about text-justify tracking-wider mb-20 text-lg whitespace-break-spaces"
         >
           Hello, my name is{" "}
-          <span className="text-cyan-300 italic">Marvell</span>, a 22 years old
+          <span className="text-[#52c3f8] italic">Marvell</span>, a 22 years old
           with a {"Bachelor's"} Degree of Science in Information and Technolgy.
           I have enough knowledge to develop a website with a full-stack
           experience from creating a webapp with various tech stacks using
