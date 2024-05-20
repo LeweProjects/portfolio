@@ -6,6 +6,7 @@ import Projects from "@/components/Layout/Projects";
 import LandingPage from "@/components/Layout/LandingPage";
 import { useEffect, useState } from "react";
 import useLandToHome from "./hooks/useLandToHome";
+import { motion } from 'framer-motion';
 
 // export type homeProps = {
 //   home: boolean;
@@ -32,7 +33,11 @@ const Home = () => {
         <Projects />
         <div className="text-lg mt-28">These are my</div>
         <h1 className="w-fit font-semibold text-5xl tech">TECH-STACKS</h1>
-        <div id="stack" className="mt-10">
+        <motion.div
+        initial={{opacity:0}}
+        whileInView={{opacity:1}}
+        viewport={{margin:"-200px"}}
+        id="stack" className="mt-10">
           <ul className="stack grid grid-cols-4 gap-x-3 gap-y-5 text-xl items-end">
             <li>
               <Image
@@ -155,7 +160,7 @@ const Home = () => {
               ViteJS
             </li>
           </ul>
-        </div>
+        </motion.div>
         <h1 className="w-fit font-semibold text-5xl mt-28 mb-10">ABOUT ME</h1>
         <div
           id="about"

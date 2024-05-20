@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { Orbitron } from "next/font/google";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { IoCodeSlashOutline } from "react-icons/io5";
 import hero from "../../app/images/hero.jpeg";
 import { GoArrowRight } from "react-icons/go";
@@ -17,6 +17,7 @@ const myName = "Marvell";
 const define = "a full-stack developer";
 
 const HeroSection = () => {
+  //texts broke into characters
   const greetChar = splitText(greet);
   const myNameChar = splitText(myName);
   const defineChar = splitText(define);
@@ -36,18 +37,41 @@ const HeroSection = () => {
       y: 0,
     },
   };
+
+  //trigger animation for hero
+  const logo = useRef(null);
+
+  const isLogoInView = useInView(logo, {
+    amount: "all",
+  });
+
+  //hide scroll until animation is finished
+  React.useEffect(() => {
+    document.documentElement.style.overflow = "hidden";
+    setTimeout(() => {
+      document.documentElement.style.overflow = "unset";
+    }, 4500);
+  }, []);
+
   return (
     <section
-      className="heroContainer font-semibold w-full 
+      className="heroContainer font-semibold w-full
       bg-center bg-[length:2150px_1000px] whitespace-break-spaces"
       style={{
         backgroundImage: `url(${hero.src})`,
       }}
     >
-      <div className="w-full min-h-[56.1rem] flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25">
+      <motion.div
+        ref={logo}
+        viewport={{ margin: "0px" }}
+        className="w-full min-h-[56.1rem] flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25"
+      >
         <motion.div
           initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{
+            opacity: isLogoInView ? 1 : 0,
+            y: isLogoInView ? 0 : -100,
+          }}
           transition={{ duration: 0.9, type: "spring" }}
           className="relative -mt-20"
         >
@@ -77,25 +101,31 @@ const HeroSection = () => {
           </motion.svg>
         </motion.div>
         <motion.div
-          initial={{
-            x: "var(--x-initial-top-lightblue)",
-            y: "var(--y-initial-top-lightblue)",
-            rotate: -45,
-            padding: 8,
-            position: "relative",
-            display: "flex",
-            justifyContent: "start",
-            paddingRight: 0,
-            visibility: "hidden",
-          }}
+          initial={
+            isLogoInView && {
+              x: "var(--x-initial-top-lightblue)",
+              y: "var(--y-initial-top-lightblue)",
+              rotate: -45,
+              padding: 8,
+              position: "relative",
+              display: "flex",
+              justifyContent: "start",
+              width: 0,
+              visibility: "hidden",
+            }
+          }
           animate={{
-            x: "var(--x-animate-top-lightblue)",
-            y: "var(--y-animate-top-lightblue)",
+            x: isLogoInView
+              ? "var(--x-animate-top-lightblue)"
+              : "var(--x-initial-top-lightblue)",
+            y: isLogoInView
+              ? "var(--y-animate-top-lightblue)"
+              : "var(--y-initial-top-lightblue)",
             rotate: -45,
             padding: 8,
             display: "flex",
             justifyContent: "start",
-            paddingRight: "var(--size-top-lightblue)",
+            width: isLogoInView ? "var(--size-top-lightblue)" : 0,
             visibility: "visible",
           }}
           transition={{ duration: 1.3, type: "spring" }}
@@ -106,24 +136,30 @@ const HeroSection = () => {
           bg-[#D4F0FC] -rotate-45 lines"
         />
         <motion.div
-          initial={{
-            x: "var(--x-initial-top-blue)",
-            y: "var(--y-initial-top-blue)",
-            rotate: -45,
-            padding: 4,
-            display: "flex",
-            justifyContent: "start",
-            paddingRight: 0,
-            visibility: "hidden",
-          }}
+          initial={
+            isLogoInView && {
+              x: "var(--x-initial-top-blue)",
+              y: "var(--y-initial-top-blue)",
+              rotate: -45,
+              padding: 4,
+              display: "flex",
+              justifyContent: "start",
+              width: 0,
+              visibility: "hidden",
+            }
+          }
           animate={{
-            x: "var(--x-animate-top-blue)",
-            y: "var(--y-animate-top-blue)",
+            x: isLogoInView
+              ? "var(--x-animate-top-blue)"
+              : "var(--x-initial-top-blue)",
+            y: isLogoInView
+              ? "var(--y-animate-top-blue)"
+              : "var(--y-initial-top-blue)",
             rotate: -45,
             padding: 4,
             display: "flex",
             justifyContent: "start",
-            paddingRight: "var(--size-top-blue)",
+            width: isLogoInView ? "var(--size-top-blue)" : 0,
             visibility: "visible",
           }}
           transition={{ duration: 1.3, type: "spring", delay: 0.3 }}
@@ -134,53 +170,63 @@ const HeroSection = () => {
           p-1 bg-[#02A9F7] -rotate-45 -translate-x-[53rem] lines"
         />
         <motion.div
-          initial={{
-            x: "var(--x-initial-bottom-lightblue)",
-            y: "var(--y-initial-bottom-lightblue)",
-            rotate: -45,
-            padding: 8,
-            display: "flex",
-            justifyContent: "start",
-            paddingRight: 0,
-            visibility: "hidden",
-          }}
+          initial={
+            isLogoInView && {
+              x: "var(--x-initial-bottom-lightblue)",
+              y: "var(--y-initial-bottom-lightblue)",
+              rotate: -45,
+              padding: 8,
+              display: "flex",
+              justifyContent: "start",
+              width: 0,
+            }
+          }
           animate={{
-            x: "var(--x-animate-bottom-lightblue)",
-            y: "var(--y-animate-bottom-lightblue)",
+            x: isLogoInView
+              ? "var(--x-animate-bottom-lightblue)"
+              : "var(--x-initial-bottom-lightblue)",
+            y: isLogoInView
+              ? "var(--y-animate-bottom-lightblue)"
+              : "var(--y-initial-bottom-lightblue)",
             rotate: -45,
             padding: 8,
             display: "flex",
             justifyContent: "start",
-            paddingRight: "var(--size-bottom-lightblue)",
+            width: isLogoInView ? "var(--size-bottom-lightblue)" : 0,
             visibility: "visible",
           }}
-          transition={{ duration: 1.3, type: "spring", delay: 0.34 }}
+          viewport={{ margin: "-200px" }}
+          transition={{ duration: 1.3, type: "spring", delay: 0.6 }}
           className=" [--size-bottom-lightblue:52rem]         
           [--x-initial-bottom-lightblue:23.5rem] [--y-initial-bottom-lightblue:31rem]
           [--x-animate-bottom-lightblue:42.2rem] [--y-animate-bottom-lightblue:12.3rem]
           bg-[#D4F0FC] -rotate-45 z-50 lines box1"
         />
         <motion.div
-          initial={{
-            //x: "60rem",
-            //y: "-8rem",
-            x: "var(--x-initial-bottom-blue)",
-            y: "var(--y-initial-bottom-blue)",
-            rotate: -45,
-            padding: 4,
-            display: "flex",
-            justifyContent: "start",
-            paddingRight: 0,
-            visibility: "hidden",
-          }}
+          initial={
+            isLogoInView && {
+              x: "var(--x-initial-bottom-blue)",
+              y: "var(--y-initial-bottom-blue)",
+              rotate: -45,
+              padding: 4,
+              display: "flex",
+              justifyContent: "start",
+              width: 0,
+              visibility: "hidden",
+            }
+          }
           animate={{
-            x: "var(--x-animate-bottom-blue)",
-            y: "var(--y-animate-bottom-blue)",
+            x: isLogoInView
+              ? "var(--x-animate-bottom-blue)"
+              : "var(--x-initial-bottom-blue)",
+            y: isLogoInView
+              ? "var(--y-animate-bottom-blue)"
+              : "var(--y-initial-bottom-blue)",
             rotate: -45,
             padding: 4,
             display: "flex",
             justifyContent: "start",
-            paddingRight: "var(--size-bottom-blue)",
+            width: isLogoInView ? "var(--size-bottom-blue)" : 0,
             visibility: "visible",
           }}
           transition={{ duration: 1.3, type: "spring", delay: 0.2 }}
@@ -193,7 +239,11 @@ const HeroSection = () => {
         <motion.div
           initial="hidden"
           animate="visible"
-          transition={{ staggerChildren: 0.09, type: "spring", delayChildren: 0.4 }}
+          transition={{
+            staggerChildren: 0.09,
+            type: "spring",
+            delayChildren: 0.4,
+          }}
           className={`${inter.className} hero 
           text-7xl -mt-8 text-center  leading-tight`}
         >
@@ -237,7 +287,7 @@ const HeroSection = () => {
         >
           view my works <GoArrowRight className="text-3xl" />
         </motion.button>
-      </div>
+      </motion.div>
     </section>
   );
 };
