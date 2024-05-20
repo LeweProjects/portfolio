@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-700 text-white;
+  @apply bg-zinc-700 text-white overflow-x-hidden;
 }
 .box {
   clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
@@ -34,9 +34,9 @@ body {
     background-size: cover;
 } */
 @media (max-width: 1400px) {
-  /* body {
+  body {
     @apply overflow-x-hidden;
-  } */
+  }
   .lines {
     @apply /* top thin blue line */
     [--size-top-blue:46.6rem]
@@ -57,9 +57,9 @@ body {
   }
 }
 @media (max-width: 1366px) {
-  /* body {
+  body {
     @apply overflow-x-hidden;
-  } */
+  }
   .hero {
     @apply text-6xl;
   }
