@@ -193,12 +193,17 @@ const HeroSection = () => {
         >
           <motion.div>
             {greetChar.map((char) => (
-              <motion.span className="inline-block" variants={textAnimation}>
+              <motion.span
+                key={char}
+                className="inline-block"
+                variants={textAnimation}
+              >
                 {char}
               </motion.span>
             ))}{" "}
             {myNameChar.map((char) => (
               <motion.span
+                key={char}
                 variants={textAnimation}
                 className="text-[#02A9F7] italic inline-block"
               >
@@ -207,7 +212,11 @@ const HeroSection = () => {
             ))}
             <br />
             {defineChar.map((char) => (
-              <motion.span className="inline-block" variants={textAnimation}>
+              <motion.span
+                key={char}
+                className="inline-block"
+                variants={textAnimation}
+              >
                 {char}
               </motion.span>
             ))}
