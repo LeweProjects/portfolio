@@ -179,7 +179,7 @@ const HeroSection = () => {
           }}
           transition={{ duration: 1.3, type: "spring", delay: 0.2 }}
           className="bg-[#02A9F7]
-          [--size-bottom-blue:53rem]          
+          [--size-bottom-blue:53.5rem]          
           [--x-initial-bottom-blue:60rem] [--y-initial-bottom-blue:-8rem]
           [--x-animate-bottom-blue:40.5rem] [--y-animate-bottom-blue:11.5rem]
           -rotate-45 translate-x-[53rem] lines box2"
