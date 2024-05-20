@@ -21,11 +21,21 @@ const HeroSection = () => {
   const myNameChar = splitText(myName);
   const defineChar = splitText(define);
 
-  function scrollTo (id: string): void {
+  function scrollTo(id: string): void {
     const section = document.getElementById(id);
-    section?.scrollIntoView({ behavior: "smooth", block:"center" });
+    section?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
+  const textAnimation = {
+    hidden: {
+      opacity: 0,
+      y: -30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
     <section
       className="heroContainer font-semibold w-full 
@@ -175,14 +185,38 @@ const HeroSection = () => {
           -rotate-45 translate-x-[53rem] lines box2"
         />
         <motion.div
+          initial="hidden"
+          animate="visible"
+          transition={{ staggerChildren: 0.09, type: "spring" }}
           className={`${inter.className} hero 
-          text-7xl -mt-8 text-center leading-tight`}
+          text-7xl -mt-8 text-center  leading-tight`}
         >
-          {greetChar} <span className="text-[#02A9F7] italic">{myName}</span>
-          <br />
-          {define}
+          <motion.div>
+            {greetChar.map((char) => (
+              <motion.span className="inline-block" variants={textAnimation}>
+                {char}
+              </motion.span>
+            ))}{" "}
+            {myNameChar.map((char) => (
+              <motion.span
+                variants={textAnimation}
+                className="text-[#02A9F7] italic inline-block"
+              >
+                {char}
+              </motion.span>
+            ))}
+            <br />
+            {defineChar.map((char) => (
+              <motion.span className="inline-block" variants={textAnimation}>
+                {char}
+              </motion.span>
+            ))}
+          </motion.div>
         </motion.div>
-        <motion.button onClick={() => scrollTo("projects")} className="viewButton flex items-center mt-10 px-6 py-4 border-[3px] text-2xl font-normal">
+        <motion.button
+          onClick={() => scrollTo("projects")}
+          className="viewButton flex items-center mt-10 px-6 py-4 border-[3px] text-2xl font-normal"
+        >
           view my works <GoArrowRight className="text-3xl" />
         </motion.button>
       </div>
