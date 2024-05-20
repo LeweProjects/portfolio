@@ -4,6 +4,8 @@ import "./globals.css";
 import Head from "@/components/Layout/Head";
 import Footer from "@/components/Layout/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { useEffect } from "react";
+import HeroSection from "@/components/Layout/HeroSection";
 
 const inter = Orbitron({ subsets: ["latin"] });
 
@@ -22,7 +24,10 @@ export default function RootLayout({
       <head>
         <title>MARVELL</title>
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} >
+        <div id="hero">
+          <HeroSection />
+        </div>
         <Head />
         <main>
           {children}

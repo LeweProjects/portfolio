@@ -1,29 +1,35 @@
 "use client";
 //import * as _ from "lodash";
-import HeroSection from "@/components/Layout/HeroSection";
 import Image from "next/image";
 import reactIcon from "./images/React-icon.png";
 import Projects from "@/components/Layout/Projects";
+import LandingPage from "@/components/Layout/LandingPage";
+import { useEffect, useState } from "react";
+import useLandToHome from "./hooks/useLandToHome";
 
-//const reactIcon = require('./images/portfolio.png')
-
-function Home() {
-  // export function scroll(): void {
-  //   if(isHome) {
-  //     home.current?.scrollIntoView({ behavior: 'smooth'})
+// export type homeProps = {
+//   home: boolean;
+// };
+const Home = () => {
+  const [home, setHome] = useState<boolean>(false);
+  // useEffect(() => {
+  //   if (home) {
+  //     document.documentElement.style.overflow = "unset";
+  //   } else {
+  //     document.documentElement.style.overflow = "hidden";
   //   }
-  // }
+  // }, [home]);
 
   return (
-    <section>
-      <div id="hero">
-       <HeroSection /> 
-      </div>
-      
+    <section className="">
+      {/* <div className={`${home ? "visible" : "visible"}`}>
+        <LandingPage home={home} setHome={setHome} />
+      </div> */}
+
       <div className="flex flex-col w-full min-h-screen h-full items-center mt-24 tracking-wider">
         <div className="text-lg">Welcome! these are my</div>
         <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
-        <Projects/>
+        <Projects />
         <div className="text-lg mt-28">These are my</div>
         <h1 className="w-fit font-semibold text-5xl tech">TECH-STACKS</h1>
         <div id="stack" className="mt-10">
@@ -151,14 +157,18 @@ function Home() {
           </ul>
         </div>
         <h1 className="w-fit font-semibold text-5xl mt-28 mb-10">ABOUT ME</h1>
-        <div id="about" className="w-[60%] about text-justify tracking-wider mb-20 text-lg whitespace-break-spaces">
+        <div
+          id="about"
+          className="w-[60%] about text-justify tracking-wider mb-20 text-lg whitespace-break-spaces"
+        >
           Hello, my name is{" "}
           <span className="text-cyan-300 italic">Marvell</span>, a 22 years old
           with a {"Bachelor's"} Degree of Science in Information and Technolgy.
-          I have enough knowledge to develop a website with a full-stack experience
-          from creating a webapp with various tech stacks using react, node, tailwind
-          , figma, javaScript, typeScript, NextJS, svelte and supabase. My area of knowledge
-          specializes in back-end and front-end programming.
+          I have enough knowledge to develop a website with a full-stack
+          experience from creating a webapp with various tech stacks using
+          react, node, tailwind , figma, javaScript, typeScript, NextJS, svelte
+          and supabase. My area of knowledge specializes in back-end and
+          front-end programming.
           <br />
           <br />
           Along with my technical expertise, I approach every project with a
@@ -172,5 +182,5 @@ function Home() {
       </div>
     </section>
   );
-}
+};
 export default Home;
