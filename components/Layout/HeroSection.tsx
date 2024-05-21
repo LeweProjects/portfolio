@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Orbitron } from "next/font/google";
 import { motion, useInView } from "framer-motion";
 import { IoCodeSlashOutline } from "react-icons/io5";
@@ -22,11 +22,20 @@ const HeroSection = () => {
   const myNameChar = splitText(myName);
   const defineChar = splitText(define);
 
+  //button function
   function scrollTo(id: string): void {
     const section = document.getElementById(id);
     section?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
+  //trigger animation for hero
+  const logo = useRef(null);
+
+  const isLogoInView = useInView(logo, {
+    amount: "all",
+  });
+
+  //text animation
   const textAnimation = {
     hidden: {
       opacity: 0,
@@ -38,12 +47,9 @@ const HeroSection = () => {
     },
   };
 
-  //trigger animation for hero
-  const logo = useRef(null);
-
-  const isLogoInView = useInView(logo, {
-    amount: "all",
-  });
+  React.useEffect(() => {
+    console.log(isLogoInView);
+  }, [isLogoInView]);
 
   //hide scroll until animation is finished
   React.useEffect(() => {
@@ -54,18 +60,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section
+    <motion.section
       className="heroContainer font-semibold w-full
       bg-center bg-[length:2150px_1000px] whitespace-break-spaces"
       style={{
         backgroundImage: `url(${hero.src})`,
       }}
     >
-      <motion.div
-        ref={logo}
-        viewport={{ margin: "0px" }}
-        className="w-full min-h-[56.1rem] flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25"
-      >
+      <motion.div className="w-full min-h-[56.1rem] flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{
@@ -77,7 +79,10 @@ const HeroSection = () => {
         >
           <div className="border-4 border-white rounded-full p-[68px] absolute ml-[56px] mt-[56px]" />
           <div className="border-4 border-white rounded-full p-9 absolute ml-[87px] mt-[87px] bg-white" />
-          <IoCodeSlashOutline className="text-5xl text-black ml-[104px] mt-[104px] absolute" />
+
+          <motion.div ref={logo} viewport={{ margin: "-5000px" }} className="">
+            <IoCodeSlashOutline className="text-5xl text-black ml-[104px] mt-[104px] absolute" />
+          </motion.div>
 
           <motion.svg
             animate={{ rotate: 360 }}
@@ -195,7 +200,6 @@ const HeroSection = () => {
             width: isLogoInView ? "var(--size-bottom-lightblue)" : 0,
             visibility: "visible",
           }}
-          viewport={{ margin: "-200px" }}
           transition={{ duration: 1.3, type: "spring", delay: 0.6 }}
           className=" [--size-bottom-lightblue:52rem]         
           [--x-initial-bottom-lightblue:23.5rem] [--y-initial-bottom-lightblue:31rem]
@@ -233,62 +237,77 @@ const HeroSection = () => {
           className="bg-[#02A9F7]
           [--size-bottom-blue:53.5rem]          
           [--x-initial-bottom-blue:60rem] [--y-initial-bottom-blue:-8rem]
-          [--x-animate-bottom-blue:40.5rem] [--y-animate-bottom-blue:11.5rem]
+          [--x-animate-bottom-blue:40.7rem] [--y-animate-bottom-blue:11.4rem]
           -rotate-45 translate-x-[53rem] lines box2"
         />
         <motion.div
-          initial="hidden"
-          animate="visible"
-          transition={{
-            staggerChildren: 0.09,
-            type: "spring",
-            delayChildren: 0.4,
+          animate={{
+            opacity: isLogoInView ? 1 : 0,
+            x: isLogoInView ? 0 : -300,
           }}
-          className={`${inter.className} hero 
-          text-7xl -mt-8 text-center  leading-tight`}
+          transition={{duration:1, type:"spring", delay:0.3}}
         >
-          <motion.div>
-            {greetChar.map((char) => (
-              <motion.span
-                key={char}
-                className="inline-block"
-                variants={textAnimation}
-              >
-                {char}
-              </motion.span>
-            ))}{" "}
-            {myNameChar.map((char) => (
-              <motion.span
-                key={char}
-                variants={textAnimation}
-                className="text-[#02A9F7] italic inline-block"
-              >
-                {char}
-              </motion.span>
-            ))}
-            <br />
-            {defineChar.map((char) => (
-              <motion.span
-                key={char}
-                className="inline-block"
-                variants={textAnimation}
-              >
-                {char}
-              </motion.span>
-            ))}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            transition={{
+              staggerChildren: 0.09,
+              type: "spring",
+              delayChildren: 0.4,
+            }}
+            className={`${inter.className} hero 
+          text-7xl -mt-8 text-center  leading-tight`}
+          >
+            <motion.div>
+              {greetChar.map((char, i) => (
+                <motion.span
+                  key={i}
+                  className="inline-block"
+                  variants={textAnimation}
+                >
+                  {char}
+                </motion.span>
+              ))}{" "}
+              {myNameChar.map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={textAnimation}
+                  className="text-[#02A9F7] italic inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+              <br />
+              {defineChar.map((char, i) => (
+                <motion.span
+                  key={i}
+                  className="inline-block"
+                  variants={textAnimation}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.div>
           </motion.div>
         </motion.div>
-        <motion.button
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, type: "spring", delay: 4 }}
-          onClick={() => scrollTo("projects")}
-          className="viewButton flex items-center mt-10 px-6 py-4 border-[3px] text-2xl font-normal"
+
+        <motion.div
+          animate={{ x: isLogoInView ? 0 : 355, opacity: isLogoInView ? 1 : 0 }}
+          transition={{ duration: 1, type: "spring" }}
         >
-          view my works <GoArrowRight className="text-3xl" />
-        </motion.button>
+          <motion.button
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, type: "spring", delay: 4 }}
+            onClick={() => scrollTo("projects")}
+            className="viewButton flex items-center mt-10 px-6 py-4 hover:bg-white hover:text-black
+             transition-colors duration-150 border-[3px] text-2xl font-normal"
+          >
+            view my works <GoArrowRight className="text-3xl" />
+          </motion.button>
+        </motion.div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

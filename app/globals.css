@@ -47,13 +47,19 @@ body {
     [--x-initial-top-lightblue:-15rem] [--y-initial-top-lightblue:-26rem]
     [--x-animate-top-lightblue:-29.6rem] [--y-animate-top-lightblue:-11.6rem]
     /* bottom thin blue line */
-    [--size-bottom-blue:30rem]
+    [--size-bottom-blue:31rem]
     [--x-initial-bottom-blue:44.1rem] [--y-initial-bottom-blue:7.75rem]
-    [--x-animate-bottom-blue:33.2rem] [--y-animate-bottom-blue:18.5rem]
+    [--x-animate-bottom-blue:32.9rem] [--y-animate-bottom-blue:18.5rem]
     /* bottom thick lightblue line */
-    [--size-bottom-lightblue:26.5rem]  
+    [--size-bottom-lightblue:29.3rem]  
     [--x-initial-bottom-lightblue:23.5rem] [--y-initial-bottom-lightblue:31rem]
-    [--x-animate-bottom-lightblue:34.5rem] [--y-animate-bottom-lightblue:20rem];
+    [--x-animate-bottom-lightblue:33.7rem] [--y-animate-bottom-lightblue:20.4rem];
+  }
+  .box1 {
+    clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+  }
+  .box2 {
+    clip-path: polygon(0% 0%, 100% 0%, 98.3% 100%, 0% 100%);
   }
 }
 @media (max-width: 1366px) {
@@ -73,13 +79,13 @@ body {
     [--x-initial-top-lightblue:-11.19rem] [--y-initial-top-lightblue:-27rem]
     [--x-animate-top-lightblue:-27.6rem] [--y-animate-top-lightblue:-10.6rem]
     /* bottom thin blue line */
-    [--size-bottom-blue:42rem]
+    [--size-bottom-blue:42.6rem]
     [--x-initial-bottom-blue:43rem] [--y-initial-bottom-blue:-2.5rem]
-    [--x-animate-bottom-blue:27.9rem] [--y-animate-bottom-blue:12.5rem]
+    [--x-animate-bottom-blue:27.8rem] [--y-animate-bottom-blue:12.9rem]
     /* bottom thick lightblue line */
     [--size-bottom-lightblue:40.3rem]  
     [--x-initial-bottom-lightblue:14.2rem] [--y-initial-bottom-lightblue:29rem]
-    [--x-animate-bottom-lightblue:28.5rem] [--y-animate-bottom-lightblue:15rem];
+    [--x-animate-bottom-lightblue:28.7rem] [--y-animate-bottom-lightblue:14.7rem];
   }
   .box1 {
     clip-path: polygon(0 0, 100% 0, 97.5% 100%, 0 100%);
@@ -92,11 +98,11 @@ body {
 @media (max-width: 1280px) {
   .lines {
     @apply /* bottom thin blue line */
-    [--size-bottom-blue:39rem]
+    [--size-bottom-blue:40rem]
     [--x-initial-bottom-blue:43rem] [--y-initial-bottom-blue:-2.5rem]
     [--x-animate-bottom-blue:25.7rem] [--y-animate-bottom-blue:14.5rem]
     /* bottom thick lightblue line */
-    [--size-bottom-lightblue:36.5rem]  
+    [--size-bottom-lightblue:37.5rem]  
     [--x-initial-bottom-lightblue:14.2rem] [--y-initial-bottom-lightblue:29rem]
     [--x-animate-bottom-lightblue:26.7rem] [--y-animate-bottom-lightblue:16.2rem];
   }
@@ -111,30 +117,30 @@ body {
 @media (max-width: 452px) {
   .lines {
     @apply /* top thin blue line */
-    [--size-top-blue:24rem]
-    [--x-initial-top-blue:-14rem] [--y-initial-top-blue:-12.56rem]
-    [--x-animate-top-blue:-5.2rem] [--y-animate-top-blue:-21.2rem]
+    [--size-top-blue:25rem]
+    [--x-initial-top-blue:-14.4rem] [--y-initial-top-blue:-11.9rem]
+    [--x-animate-top-blue:-5.6rem] [--y-animate-top-blue:-20.8rem]
     /* top thick lightblue line */
-    [--size-top-lightblue:21.7rem]  
-    [--x-initial-top-lightblue:-13.95rem] [--y-initial-top-lightblue:-13.5rem]
-    [--x-animate-top-lightblue:-6.1rem] [--y-animate-top-lightblue:-21.3rem]
+    [--size-top-lightblue:22.7rem]  
+    [--x-initial-top-lightblue:-14.8rem] [--y-initial-top-lightblue:-12.8rem]
+    [--x-animate-top-lightblue:-6.6rem] [--y-animate-top-lightblue:-21rem]
     /* bottom thin blue line */
     [--size-bottom-blue:24rem]
-    [--x-initial-bottom-blue:13.9rem] [--y-initial-bottom-blue:8.7rem]
-    [--x-animate-bottom-blue:5.13rem] [--y-animate-bottom-blue:17.4rem]
+    [--x-initial-bottom-blue:14.5rem] [--y-initial-bottom-blue:8.2rem]
+    [--x-animate-bottom-blue:5.8rem] [--y-animate-bottom-blue:16.7rem]
     /* bottom thick lightblue line */
-    [--size-bottom-lightblue:21.7rem]  
+    [--size-bottom-lightblue:22rem]  
     [--x-initial-bottom-lightblue:-1.8rem] [--y-initial-bottom-lightblue:27rem]
-    [--x-animate-bottom-lightblue:6.1rem] [--y-animate-bottom-lightblue:19rem];
+    [--x-animate-bottom-lightblue:6.65rem] [--y-animate-bottom-lightblue:18.5rem];
   }
   .box1 {
-    clip-path: polygon(0 0, 100% 0, 95.9% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 95.8% 100%, 0 100%);
   }
   .box2 {
-    clip-path: polygon(0 0, 100% 0, 98.1% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
   }
   .hero {
-    @apply text-[27px] whitespace-nowrap;
+    @apply text-[27px];
   }
   .heroContainer {
     @apply flex;
