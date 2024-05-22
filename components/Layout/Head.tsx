@@ -1,12 +1,12 @@
 "use client";
 import { useProjectsRef } from "@/app/functions/refContext";
 import { useInView, motion } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Projects from "./Projects";
 import useRefForInView from "@/app/hooks/useRefForInView";
 import { headerProps } from "@/app/headerProps";
 
-const head: React.FC<headerProps> = ({
+const Head: React.FC<headerProps> = ({
   isHomeInView,
   isProjectInView,
   isSkillsInView,
@@ -41,7 +41,7 @@ const head: React.FC<headerProps> = ({
     section?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     console.log("contacts: " + isContactsInView);
     console.log("about: " + isAboutInView);
     if (isHomeInView) {
@@ -159,7 +159,7 @@ const head: React.FC<headerProps> = ({
                 fontSize: fonts.home,
                 paddingInline: fonts.homeP,
                 color: fonts.homeC,
-                opacity: fonts.homeO
+                opacity: fonts.homeO,
               }}
               onClick={() => scrollTo("hero")}
               className="ease-in"
@@ -171,7 +171,7 @@ const head: React.FC<headerProps> = ({
                 fontSize: fonts.projects,
                 paddingInline: fonts.projectsP,
                 color: fonts.projectsC,
-                opacity: fonts.projectsO
+                opacity: fonts.projectsO,
               }}
               onClick={() => scrollTo("projects")}
               className="ease-in"
@@ -194,7 +194,7 @@ const head: React.FC<headerProps> = ({
                 fontSize: fonts.about,
                 paddingInline: fonts.aboutP,
                 color: fonts.aboutC,
-                opacity: fonts.aboutO
+                opacity: fonts.aboutO,
               }}
               onClick={() => scrollTo("about")}
               className="ease-in"
@@ -206,7 +206,7 @@ const head: React.FC<headerProps> = ({
                 fontSize: fonts.contacts,
                 paddingInline: fonts.contactsP,
                 color: fonts.contactsC,
-                opacity: fonts.contactsO
+                opacity: fonts.contactsO,
               }}
               onClick={() => scrollTo("contacts")}
               className="ease-in"
@@ -220,4 +220,4 @@ const head: React.FC<headerProps> = ({
   );
 };
 
-export default head;
+export default Head;
