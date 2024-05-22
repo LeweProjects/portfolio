@@ -14,6 +14,9 @@ body {
 .box2 {
   clip-path: polygon(0% 0%, 100% 0%, 99% 100%, 0% 100%);
 }
+.box3 {
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 4% 100%);
+}
 .stack li {
   @apply flex flex-col text-center items-center;
 }

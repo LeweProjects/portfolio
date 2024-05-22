@@ -7,6 +7,7 @@ import hero from "../../app/images/hero.jpeg";
 import { GoArrowRight } from "react-icons/go";
 import splitText from "@/app/utils/splitText";
 import { relative } from "path";
+import { headerProps } from "@/app/headerProps";
 
 const inter = Orbitron({
   subsets: ["latin"],
@@ -16,7 +17,7 @@ const greet = "Hello, I am";
 const myName = "Marvell";
 const define = "a full-stack developer";
 
-const HeroSection = () => {
+const HeroSection: React.FC<headerProps> = ({ home }) => {
   //texts broke into characters
   const greetChar = splitText(greet);
   const myNameChar = splitText(myName);
@@ -47,10 +48,6 @@ const HeroSection = () => {
     },
   };
 
-  React.useEffect(() => {
-    console.log(isLogoInView);
-  }, [isLogoInView]);
-
   //hide scroll until animation is finished
   React.useEffect(() => {
     document.documentElement.style.overflow = "hidden";
@@ -61,6 +58,7 @@ const HeroSection = () => {
 
   return (
     <motion.section
+      ref={home}
       className="heroContainer font-semibold w-full
       bg-center bg-[length:2150px_1000px] whitespace-break-spaces"
       style={{
@@ -245,7 +243,7 @@ const HeroSection = () => {
             opacity: isLogoInView ? 1 : 0,
             x: isLogoInView ? 0 : -300,
           }}
-          transition={{duration:1, type:"spring", delay:0.3}}
+          transition={{ duration: 1, type: "spring", delay: 0.3 }}
         >
           <motion.div
             initial="hidden"

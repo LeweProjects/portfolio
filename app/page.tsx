@@ -3,41 +3,57 @@
 import Image from "next/image";
 import reactIcon from "./images/React-icon.png";
 import Projects from "@/components/Layout/Projects";
-import LandingPage from "@/components/Layout/LandingPage";
-import { useEffect, useState } from "react";
-import useLandToHome from "./hooks/useLandToHome";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Head from "../components/Layout/Head";
+import useRefForInView from "./hooks/useRefForInView";
+import Footer from "@/components/Layout/Footer";
+import HeroSection from "@/components/Layout/HeroSection";
 
-// export type homeProps = {
-//   home: boolean;
-// };
 const Home = () => {
-  const [home, setHome] = useState<boolean>(false);
-  // useEffect(() => {
-  //   if (home) {
-  //     document.documentElement.style.overflow = "unset";
-  //   } else {
-  //     document.documentElement.style.overflow = "hidden";
-  //   }
-  // }, [home]);
-
+  const {
+    home,
+    projects,
+    skills,
+    about,
+    contacts,
+    isHomeInView,
+    isProjectInView,
+    isSkillsInView,
+    isContactsInView,
+    isAboutInView,
+  } = useRefForInView();
   return (
     <section className="">
-      {/* <div className={`${home ? "visible" : "visible"}`}>
-        <LandingPage home={home} setHome={setHome} />
-      </div> */}
+      <div id="hero">
+        {/* @ts-ignore */}
+        <HeroSection home={home} />
+      </div>
+     
+      {/* @ts-ignore */}
+      <Head
+        isHomeInView={isHomeInView}
+        isProjectInView={isProjectInView}
+        isSkillsInView={isSkillsInView}
+        isContactsInView={isContactsInView}
+        isAboutInView={isAboutInView}
+      />
 
       <div className="flex flex-col w-full min-h-screen h-full items-center mt-24 tracking-wider">
-        <div className="text-lg">Welcome! these are my</div>
-        <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
-        <Projects />
-        <div className="text-lg mt-28">These are my</div>
-        <h1 className="w-fit font-semibold text-5xl tech">TECH-STACKS</h1>
+        {/* @ts-ignore */}
+        <Projects projects={projects} skills={skills} />
+
         <motion.div
-        initial={{opacity:0}}
-        whileInView={{opacity:1}}
-        viewport={{margin:"-200px"}}
-        id="stack" className="mt-10">
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ margin: "-200px" }}
+          id="stack"
+          ref={skills}
+        >
+          <div className="flex flex-col mb-10 items-center">
+            <p className="text-lg mt-28">These are my</p>
+            <h1 className="w-fit font-semibold text-5xl tech">TECH-STACKS</h1>
+          </div>
+
           <ul className="stack grid grid-cols-4 gap-x-3 gap-y-5 text-xl items-end">
             <li>
               <Image
@@ -163,6 +179,7 @@ const Home = () => {
         </motion.div>
         <h1 className="w-fit font-semibold text-5xl mt-28 mb-10">ABOUT ME</h1>
         <div
+          ref={about}
           id="about"
           className="w-[60%] about text-justify tracking-wider mb-20 text-lg whitespace-break-spaces"
         >
@@ -185,6 +202,8 @@ const Home = () => {
           keeping up with current industry trends.
         </div>
       </div>
+      {/* @ts-ignore */}
+      <Footer contacts={contacts} />
     </section>
   );
 };
