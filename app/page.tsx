@@ -31,6 +31,11 @@ const Home = () => {
      
       {/* @ts-ignore */}
       <Head
+        home={home}
+        contacts={contacts}
+        about={about}
+        skills={skills}
+        projects={projects}
         isHomeInView={isHomeInView}
         isProjectInView={isProjectInView}
         isSkillsInView={isSkillsInView}

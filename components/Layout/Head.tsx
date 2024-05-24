@@ -1,12 +1,17 @@
 "use client";
 import { useProjectsRef } from "@/app/functions/refContext";
-import { useInView, motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { useInView, motion, useScroll, useTransform } from "framer-motion";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import Projects from "./Projects";
 import useRefForInView from "@/app/hooks/useRefForInView";
 import { headerProps } from "@/app/headerProps";
 
 const Head: React.FC<headerProps> = ({
+  projects,
+  home,
+  contacts,
+  about,
+  skills,
   isHomeInView,
   isProjectInView,
   isSkillsInView,
@@ -42,6 +47,7 @@ const Head: React.FC<headerProps> = ({
   }
 
   useEffect(() => {
+    console.log("skills: " + isAboutInView);
     console.log("contacts: " + isContactsInView);
     console.log("about: " + isAboutInView);
     if (isHomeInView) {
@@ -135,19 +141,40 @@ const Head: React.FC<headerProps> = ({
     isAboutInView,
     isContactsInView,
   ]);
+  const circle = createRef();
+
+  const { scrollYProgress } = useScroll({
+    target: isHomeInView
+      ? home
+      : isProjectInView
+      ? projects
+      : isSkillsInView
+      ? skills
+      : isContactsInView
+      ? contacts
+      : about,
+    offset: ["start end", "end start"],
+  });
+
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
   return (
-    <motion.div className="w-full flex z-30 h-[8vh] bg-zinc-900 items-end justify-center  sticky top-0">
-      <div className="flex justify-center items-center w-[38rem] h-[6vh] box3 -mb-12 bg-zinc-900 absolute"></div>
-      <div className="flex justify-center items-center w-[50rem] h-[6vh] -mb-12">
+    <motion.div className="w-full flex z-30 h-[8vh] bg-zinc-900 items-end justify-center sticky top-0">
+      <div className="flex justify-center items-center w-[38rem] h-[6vh] box3 -mb-12 bg-zinc-900 absolute" />
+      <motion.div className="flex justify-center items-center w-[50rem] h-[6vh] -mb-12">
         <motion.div
-          className="border-t-[7px] border-b-[7px] absolute flex rounded-full h-[180px] w-[180px]
-        justify-center bg-gradient-radial from-[#006A9C] to-black border-white "
+          className="border-t-[7px] border-b-[7px] border-none absolute flex rounded-full h-[180px] w-[180px]
+        justify-center bg-gradient-radial from-blue-600 to-[#000000]"
         />
         <motion.div
-          className="border-t-[7px] border-b-[7px] absolute flex rounded-full w-[126px] h-[122px]
+          className="border-t-[7px] border-b-[7px] absolute flex rounded-full w-[126px] h-[126px]
         justify-center bg-[#0a0a0a] border-white"
         />
+        <motion.div
+          style={{ rotate }}
+          className="border-t-[7px] border-b-[7px] absolute flex rounded-full h-[180px] w-[180px]
+        justify-center bg-gradient-radial  border-white"
+        ></motion.div>
         <motion.div
           animate={{
             x: xAxis,
@@ -215,7 +242,7 @@ const Head: React.FC<headerProps> = ({
             </motion.button>
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
