@@ -35,12 +35,10 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
   // }, [isProjectInView]);
 
   return (
-    <div id="projects" ref={projects} className="">
+    <div id="projects" ref={projects} className="mt-16">
       <div className="flex flex-col items-center">
         <div className="text-lg">Welcome! these are my</div>
-        <h1 className="w-fit font-semibold text-5xl">
-          PROJECTS
-        </h1>
+        <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
 
         <div className="projects grid grid-cols-2 gap-x-8 mt-16">
           <div className="flex flex-col items-center">
@@ -145,6 +143,7 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
             </h1>
             <p className="des">A website made for our capstone project.</p>
             <div
+              id="projectsContainer"
               className={`${
                 showDetails1
                   ? "transition-all duration-500 ease-out overflow-y-visible max-h-[20rem] mt-5"

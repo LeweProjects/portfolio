@@ -17,7 +17,7 @@ const greet = "Hello, I am";
 const myName = "Marvell";
 const define = "a full-stack developer";
 
-const HeroSection: React.FC<headerProps> = ({ home }) => {
+const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
   //texts broke into characters
   const greetChar = splitText(greet);
   const myNameChar = splitText(myName);
@@ -28,13 +28,6 @@ const HeroSection: React.FC<headerProps> = ({ home }) => {
     const section = document.getElementById(id);
     section?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
-
-  //trigger animation for hero
-  const logo = useRef(null);
-
-  const isLogoInView = useInView(logo, {
-    amount: "all",
-  });
 
   //text animation
   const textAnimation = {

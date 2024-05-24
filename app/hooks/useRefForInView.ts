@@ -8,6 +8,7 @@ const useRefForInView = () => {
   const skills = useRef(null);
   const about = useRef(null);
   const contacts = useRef(null);
+  const logo = useRef(null);
 
   // const arrLength = arr.length;
   // const [elRefs, setElRefs] = React.useState([]);
@@ -23,8 +24,14 @@ const useRefForInView = () => {
 
   // const ref = createRef<any>();
   // console.log(ref);
+  const isLogoInView = useInView(logo, {
+    amount: "all",
+  });
   const isHomeInView = useInView(home, {
     amount: "all",
+  });
+  const isSomeProjectInView = useInView(projects, {
+    amount: "some",
   });
   const isProjectInView = useInView(projects, {
     amount: "all",
@@ -45,16 +52,19 @@ const useRefForInView = () => {
   //   }
   // }, [isProjectInView]);
   return {
+    logo,
+    home,
     projects,
     skills,
-    home,
     about,
     contacts,
+    isLogoInView,
     isHomeInView,
     isProjectInView,
+    isSomeProjectInView,
     isSkillsInView,
     isContactsInView,
-    isAboutInView
+    isAboutInView,
   };
 };
 

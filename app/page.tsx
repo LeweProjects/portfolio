@@ -11,13 +11,16 @@ import HeroSection from "@/components/Layout/HeroSection";
 
 const Home = () => {
   const {
+    logo,
     home,
     projects,
     skills,
     about,
     contacts,
     isHomeInView,
+    isLogoInView,
     isProjectInView,
+    isSomeProjectInView,
     isSkillsInView,
     isContactsInView,
     isAboutInView,
@@ -26,9 +29,9 @@ const Home = () => {
     <section className="">
       <div id="hero">
         {/* @ts-ignore */}
-        <HeroSection home={home} />
+        <HeroSection home={home} logo={logo} isLogoInView={isLogoInView} />
       </div>
-     
+
       {/* @ts-ignore */}
       <Head
         home={home}
@@ -37,6 +40,8 @@ const Home = () => {
         skills={skills}
         projects={projects}
         isHomeInView={isHomeInView}
+        isLogoInView={isLogoInView}
+        isSomeProjectInView={isSomeProjectInView}
         isProjectInView={isProjectInView}
         isSkillsInView={isSkillsInView}
         isContactsInView={isContactsInView}
