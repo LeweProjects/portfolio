@@ -50,22 +50,23 @@ const Head: React.FC<headerProps> = ({
     console.log("skills: " + isAboutInView);
     console.log("contacts: " + isContactsInView);
     console.log("about: " + isAboutInView);
-    if (isHomeInView) {
-      setXAxis(170);
-      setFonts((prev) => {
-        return {
-          ...prev,
-          home: "24px",
-          projects: "14px",
-          homeP: "55px",
-          projectsP: "2px",
-          homeC: "#28C9FA",
-          projectsC: "#FFFFFF",
-          aboutO: "0%",
-          contactsO: "0%",
-        };
-      });
-    } else if (isProjectInView) {
+    // if (isHomeInView) {
+    //   setXAxis(170);
+    //   setFonts((prev) => {
+    //     return {
+    //       ...prev,
+    //       home: "24px",
+    //       projects: "14px",
+    //       homeP: "55px",
+    //       projectsP: "2px",
+    //       homeC: "#28C9FA",
+    //       projectsC: "#FFFFFF",
+    //       aboutO: "0%",
+    //       contactsO: "0%",
+    //     };
+    //   });
+    // } 
+    if (isProjectInView) {
       setXAxis(100);
       setFonts((prev) => {
         return {
@@ -144,19 +145,21 @@ const Head: React.FC<headerProps> = ({
   const circle = createRef();
 
   const { scrollYProgress } = useScroll({
-    target: isHomeInView
-      ? home
-      : isProjectInView
-      ? projects
-      : isSkillsInView
-      ? skills
-      : isContactsInView
-      ? contacts
-      : about,
-    offset: ["start end", "end start"],
+    // target: isHomeInView
+    //   ? home
+    //   : isProjectInView
+    //   ? projects
+    //   : isSkillsInView
+    //   ? skills
+    //   : isContactsInView
+    //   ? contacts
+    //   : about,
+    // offset: ["start end", "end start"],
   });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 500
+    
+  ]);
 
   return (
     <motion.div className="w-full flex z-30 h-[8vh] bg-zinc-900 items-end justify-center sticky top-0">
