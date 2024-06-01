@@ -64,6 +64,9 @@ body {
   .box2 {
     clip-path: polygon(0% 0%, 100% 0%, 98.3% 100%, 0% 100%);
   }
+  .bump {
+    @apply -mb-11
+  }
 }
 @media (max-width: 1366px) {
   body {
@@ -148,6 +151,10 @@ body {
   .heroContainer {
     @apply flex;
   }
+  /* .head button {
+    @apply bg-black [--fontSizeFocus: 24px]
+  } */
+
   .viewButton {
     @apply text-xl px-5 py-3
   }

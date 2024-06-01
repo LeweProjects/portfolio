@@ -48,14 +48,19 @@ const Head: React.FC<headerProps> = ({
     section?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
+  function scrollToProjects(): void {
+    const section = document.getElementById("skills");
+    section?.scrollIntoView({behavior: "smooth", block: "start"})
+  }
   useEffect(() => {
-    if (isContactsInView === true) {
-      console.log("true");
-      scrollTo("projectsContainer");
+    if (isHomeInView !== true) {
+      scrollToProjects();
+      console.log("true")
+    } else if (isAboutInView === true){
+      scrollToProjects();
+      //console.log("true")
     }
-    // !isHomeInView && isLogoInView && console.log("true");
-    // !isHomeInView && isLogoInView && scrollTo("projects");
-  }, [isContactsInView]);
+  }, [isHomeInView, isAboutInView]);
 
   useEffect(() => {
     // console.log("projects: " + isProjectInView);
@@ -161,7 +166,7 @@ const Head: React.FC<headerProps> = ({
 
   return (
     <motion.div className="w-full flex z-30 h-[8vh] bg-zinc-900 items-end justify-center sticky top-0">
-      <div className="flex justify-center items-center w-[38rem] h-[6vh] box3 -mb-12 bg-zinc-900 absolute" />
+      <div className="flex bump justify-center items-center w-[38rem] h-[6vh] box3 -mb-12 bg-zinc-900 absolute" />
       <motion.div className="flex justify-center items-center w-[50rem] h-[6vh] -mb-12">
         <motion.div
           className="border-t-[7px] border-b-[7px] border-none absolute flex rounded-full h-[180px] w-[180px]

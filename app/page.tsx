@@ -8,6 +8,8 @@ import Head from "../components/Layout/Head";
 import useRefForInView from "./hooks/useRefForInView";
 import Footer from "@/components/Layout/Footer";
 import HeroSection from "@/components/Layout/HeroSection";
+import node from "./images/nodejs.webp"
+import nextJs from "./images/next-js.svg"
 
 const Home = () => {
   const {
@@ -76,8 +78,8 @@ const Home = () => {
               ReactJS
             </li>
             <li>
-              <img
-                src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"
+              <Image
+                src={node}
                 width={500}
                 height={500}
                 className="w-16"
@@ -86,8 +88,8 @@ const Home = () => {
               Node.js
             </li>
             <li>
-              <img
-                src="https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png"
+              <Image
+                src={nextJs}
                 width={500}
                 height={500}
                 className="w-16"
