@@ -48,7 +48,8 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
         <div className="projects grid grid-cols-3 gap-x-8 mt-16">
           <div className="flex flex-col items-center">
             <Link
-              href="https://www.marvellportfolio.site/"
+              onClick={() => window.location.reload()}
+              href="/"
               className="w-[50vh] lowercase h-[25vh] projImage box absolute z-10 opacity-0 flex items-center justify-center hover:cursor-pointer text-6xl hover:opacity-100 transition duration-200 ease-in bg-black"
             >
               Visit
@@ -239,9 +240,11 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-[50vh] hover:cursor-default lowercase h-[25vh] projImage box absolute
+            <div
+              className="w-[50vh] hover:cursor-default lowercase h-[25vh] projImage box absolute
              z-10 opacity-0 flex items-center justify-center text-5xl hover:opacity-100 transition 
-             duration-200 ease-in bg-black">
+             duration-200 ease-in bg-black"
+            >
               ongoing
             </div>
             <div
@@ -250,7 +253,8 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
             ></div>
             <h1 className="mt-2 text-xl font-semibold">STImart V2</h1>
             <p className="w-[50vh] des">
-              This is a remake project for my first react project. An E-commerce website made for our {"school's"} proware.
+              This is a remake project for my first react project. An E-commerce
+              website made for our {"school's"} proware.
             </p>
             <div
               className={`${
