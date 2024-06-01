@@ -250,7 +250,7 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
             ></div>
             <h1 className="mt-2 text-xl font-semibold">STImart V2</h1>
             <p className="w-[50vh] des">
-              This is a remake project for my first react project. An E-commerce website made for our school's proware.
+              This is a remake project for my first react project. An E-commerce website made for our {"school's"} proware.
             </p>
             <div
               className={`${
