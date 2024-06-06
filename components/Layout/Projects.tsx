@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import reactIcon from "../../app/images/React-icon.png";
 import nextJs from "../../app/images/next-js.svg";
 import nodeJs from "../../app/images/nodejs.webp";
@@ -40,7 +40,7 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
   // }, [isProjectInView]);
 
   return (
-    <div id="projects" ref={projects} className="mt-16">
+    <div ref={projects} className="mt-16">
       <div className="flex flex-col items-center">
         <div className="text-lg">Welcome! these are my</div>
         <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
@@ -58,7 +58,9 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
               className="w-[50vh] h-[25vh] projImage box bg-[length:50vh_25vh]
              bg-no-repeat bg-[url('./images/portfolio.png')] bg-white"
             ></div>
-            <h1 className="mt-2 text-xl font-semibold">My Portfolio</h1>
+            <h1 id="projects" className="mt-2 text-xl font-semibold">
+              My Portfolio
+            </h1>
             <p className="w-[50vh] des">
               My personal website that contains my information and projects.
             </p>

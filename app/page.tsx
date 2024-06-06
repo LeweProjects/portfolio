@@ -4,12 +4,12 @@ import Image from "next/image";
 import reactIcon from "./images/React-icon.png";
 import Projects from "@/components/Layout/Projects";
 import { motion } from "framer-motion";
-import Head from "../components/Layout/Head";
+import NavBar from "../components/Layout/NavBar";
 import useRefForInView from "./hooks/useRefForInView";
 import Footer from "@/components/Layout/Footer";
 import HeroSection from "@/components/Layout/HeroSection";
-import node from "./images/nodejs.webp"
-import nextJs from "./images/next-js.svg"
+import node from "./images/nodejs.webp";
+import nextJs from "./images/next-js.svg";
 
 const Home = () => {
   const {
@@ -33,9 +33,9 @@ const Home = () => {
         {/* @ts-ignore */}
         <HeroSection home={home} logo={logo} isLogoInView={isLogoInView} />
       </div>
-
+      <div className="w-full p-5 bg-zinc-700 z-30 absolute"></div>
       {/* @ts-ignore */}
-      <Head
+      <NavBar
         home={home}
         contacts={contacts}
         about={about}

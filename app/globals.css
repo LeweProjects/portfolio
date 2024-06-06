@@ -154,7 +154,15 @@ body {
   /* .head button {
     @apply bg-black [--fontSizeFocus: 24px]
   } */
-
+  .navbar {
+    @apply hidden
+  }
+  .sidebar{
+    @apply visible
+  }
+  #projects {
+    @apply mt-6
+  }
   .viewButton {
     @apply text-xl px-5 py-3
   }

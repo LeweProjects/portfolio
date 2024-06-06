@@ -42,12 +42,12 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
   };
 
   //hide scroll until animation is finished
-  React.useEffect(() => {
-    document.documentElement.style.overflow = "hidden";
-    setTimeout(() => {
-      document.documentElement.style.overflow = "unset";
-    }, 4500);
-  }, []);
+  // React.useEffect(() => {
+  //   document.documentElement.style.overflow = "hidden";
+  //   setTimeout(() => {
+  //     document.documentElement.style.overflow = "unset";
+  //   }, 4500);
+  // }, []);
 
   return (
     <motion.section
@@ -192,10 +192,10 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
             visibility: "visible",
           }}
           transition={{ duration: 1.3, type: "spring", delay: 0.6 }}
-          className=" [--size-bottom-lightblue:52rem]         
+          className=" [--size-bottom-lightblue:52rem] 
           [--x-initial-bottom-lightblue:23.5rem] [--y-initial-bottom-lightblue:31rem]
           [--x-animate-bottom-lightblue:42.2rem] [--y-animate-bottom-lightblue:12.3rem]
-          bg-[#D4F0FC] -rotate-45 z-50 lines box1"
+          bg-[#D4F0FC] -rotate-45 z-20 lines box1"
         />
         <motion.div
           initial={

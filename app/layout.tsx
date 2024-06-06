@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Orbitron } from "next/font/google";
 import "./globals.css";
-import Head from "@/components/Layout/Head";
 import { Analytics } from "@vercel/analytics/react";
 import { motion } from "framer-motion";
-import logo from "./images/logo.png"
+import logo from "./images/logo.png";
+import { Suspense } from "react";
 
 const inter = Orbitron({ subsets: ["latin"] });
 
@@ -13,18 +13,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-
   return (
     <html lang="en">
       <head>
         <title>MARVELL</title>
       </head>
-      <body
-        className={inter.className}
-        style={{ overflowX: "hidden" }}
-      >
-    
+      <body className={inter.className} style={{ overflowX: "hidden" }}>
         <main>
           {children}
           <Analytics />

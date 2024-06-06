@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 
-const page = () => {
+const page = async () => {
   return (
     <div className="flex w-full h-screen justify-center items-center">
       Profile
