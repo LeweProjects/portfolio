@@ -44,9 +44,9 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
   //hide scroll until animation is finished
   React.useEffect(() => {
     document.documentElement.style.overflowX = "hidden";
-    document.documentElement.style.overflow = "hidden";
+    document.documentElement.style.overflowY = "hidden";
     setTimeout(() => {
-      document.documentElement.style.overflow = "unset";
+      document.documentElement.style.overflowY = "unset";
     }, 4500);
   }, []);
 
