@@ -6,6 +6,7 @@ import reactIcon from "../../app/images/React-icon.png";
 import nextJs from "../../app/images/next-js.svg";
 import Laravel from "../../app/images/laravel.png";
 import PHP from "../../app/images/PHP-logo.svg.webp";
+import Vite from "../../app/images/Vitejs-logo.svg.png";
 import nodeJs from "../../app/images/nodejs.webp";
 import javaScript from "../../app/images/JavaScript.png";
 import { headerProps } from "@/app/headerProps";
@@ -288,6 +289,26 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
                     alt="logo"
                   />
                   PHP
+                </div>
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={reactIcon}
+                    width={500}
+                    height={500}
+                    className="w-16"
+                    alt="logo"
+                  />
+                  ReactJS
+                </div>
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={Vite}
+                    width={500}
+                    height={500}
+                    className="w-16"
+                    alt="logo"
+                  />
+                  ViteJS
                 </div>
                 <div className="tw flex flex-col items-center">
                   <img
