@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head style={{ overflowX: "hidden" }}>
+      <head>
         <title>MARVELL</title>
       </head>
       <body className={inter.className}>
