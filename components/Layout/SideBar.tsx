@@ -37,7 +37,7 @@ const SideBar: React.FC<sideBarProps> = ({
       ></button> */}
 
       <motion.div
-        animate={{ opacity: openSide ? 1 : 0 }}
+        animate={{ opacity: openSide ? 1 : 0, visibility: openSide ? "visible":"hidden" }}
         className="absolute bg-black bg-opacity-30 backdrop-blur-md flex flex-col items-start w-screen h-[400vw] "
       ></motion.div>
       <motion.div
