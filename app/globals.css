@@ -158,7 +158,7 @@ body {
     @apply hidden
   }
   .sidebar{
-    @apply visible
+    @apply visible sticky top-0 z-40 
   }
   #projects {
     @apply mt-6

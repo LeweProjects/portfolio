@@ -13,15 +13,21 @@ const SideBar: React.FC<sideBarProps> = ({
   function scrollAndClose(sec: string) {
     scrollTo(sec);
     setOpenSide(false);
+    document.body.style.overflowY = "unset";
   }
 
   const scope = useMenuAnimation(openSide);
   function toggle() {
     setOpenSide(!openSide);
+    if (openSide == true) {
+      document.body.style.overflowY = "unset";
+    } else if (openSide == false) {
+      document.body.style.overflowY = "hidden";
+    }
   }
 
   return (
-    <div className="sticky top-0 z-40 sidebar invisible">
+    <div className="sidebar invisible">
       <div ref={scope}>
         <SideBarButton toggle={toggle} />
       </div>
@@ -30,18 +36,17 @@ const SideBar: React.FC<sideBarProps> = ({
         className="bg-zinc-900 flex absolute mt-3 ml-3 rounded-full justify-center z-40 items-center p-3 w-16 h-16"
       ></button> */}
 
-      <motion.div 
-      animate={{opacity: openSide ? 1:0}}
-      className="absolute bg-black bg-opacity-30 backdrop-blur-md flex flex-col items-start w-screen h-[400vw] "></motion.div>
+      <motion.div
+        animate={{ opacity: openSide ? 1 : 0 }}
+        className="absolute bg-black bg-opacity-30 backdrop-blur-md flex flex-col items-start w-screen h-[400vw] "
+      ></motion.div>
       <motion.div
         animate={openSide ? { translateX: 0 } : { translateX: -352 }}
         transition={{ duration: 1, type: "spring" }}
         className="bg-zinc-900 pt-36 pl-10 w-[22rem] h-[200vw] z-30 absolute flex flex-col justify-start items-start space-y-16 text-3xl"
       >
         <button onClick={() => scrollAndClose("hero")}>Home</button>
-        <button onClick={() => scrollAndClose("projects")}>
-          Projects
-        </button>
+        <button onClick={() => scrollAndClose("projects")}>Projects</button>
         <button onClick={() => scrollAndClose("stack")}>Skills</button>
         <button onClick={() => scrollAndClose("about")}>About</button>
         <button onClick={() => scrollAndClose("contacts")}>Contacts</button>

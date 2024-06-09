@@ -165,12 +165,11 @@ const NavBar: React.FC<headerProps> = ({
   const [openSide, setOpenSide] = useState(false);
 
   React.useEffect(() => {
-    if (openSide) {
-      document.body.style.overflowY = "hidden";
-    } else {
-      document.body.style.overflowY = "unset";
-    }
-  }, [openSide]);
+    document.documentElement.style.overflowY = "clip";
+    setTimeout(() => {
+      document.documentElement.style.overflowY = "unset";
+    }, 4500);
+  }, []);
 
   return (
     <>

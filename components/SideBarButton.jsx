@@ -11,7 +11,7 @@ const Path = (props) => (
 
 const SidBarButton = ({ toggle }) => {
   return (
-    <button onClick={toggle} className="mt-5 ml-3  rounded-full absolute z-40">
+    <button onClick={toggle} className="mt-5 ml-3 rounded-full absolute z-40">
       <div className=" bg-zinc-900 rounded-full w-14 h-14 flex justify-center items-center">
         <svg
           width="24"

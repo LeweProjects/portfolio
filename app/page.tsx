@@ -10,6 +10,10 @@ import Footer from "@/components/Layout/Footer";
 import HeroSection from "@/components/Layout/HeroSection";
 import node from "./images/nodejs.webp";
 import nextJs from "./images/next-js.svg";
+import ViteJS from "./images/Vitejs-logo.svg.png";
+import PHP from "./images/PHP-logo.svg.webp";
+import Laravel from "./images/laravel.png";
+import SQLite from "./images/Sqlite-square-icon.svg.png";
 
 const Home = () => {
   const {
@@ -34,21 +38,21 @@ const Home = () => {
         <HeroSection home={home} logo={logo} isLogoInView={isLogoInView} />
       </div>
       <div className="w-full p-5 bg-zinc-700 z-30 absolute"></div>
-      {/* @ts-ignore */}
-      <NavBar
-        home={home}
-        contacts={contacts}
-        about={about}
-        skills={skills}
-        projects={projects}
-        isHomeInView={isHomeInView}
-        isLogoInView={isLogoInView}
-        isSomeProjectInView={isSomeProjectInView}
-        isProjectInView={isProjectInView}
-        isSkillsInView={isSkillsInView}
-        isContactsInView={isContactsInView}
-        isAboutInView={isAboutInView}
-      />
+        {/* @ts-ignore */}
+        <NavBar
+          home={home}
+          contacts={contacts}
+          about={about}
+          skills={skills}
+          projects={projects}
+          isHomeInView={isHomeInView}
+          isLogoInView={isLogoInView}
+          isSomeProjectInView={isSomeProjectInView}
+          isProjectInView={isProjectInView}
+          isSkillsInView={isSkillsInView}
+          isContactsInView={isContactsInView}
+          isAboutInView={isAboutInView}
+        />
 
       <div className="flex flex-col w-full min-h-screen h-full items-center mt-24 tracking-wider">
         {/* @ts-ignore */}
@@ -180,12 +184,44 @@ const Home = () => {
               Figma
             </li>
             <li>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/2078px-Vitejs-logo.svg.png"
+              <Image
+                src={ViteJS}
                 className="w-14"
+                width={500}
+                height={500}
                 alt="logo"
               />
               ViteJS
+            </li>
+            <li>
+              <Image
+                src={PHP}
+                className="w-14"
+                width={500}
+                height={500}
+                alt="logo"
+              />
+              PHP
+            </li>
+            <li>
+              <Image
+                src={Laravel}
+                className="w-14"
+                width={500}
+                height={500}
+                alt="logo"
+              />
+              Laravel
+            </li>
+            <li>
+              <Image
+                src={SQLite}
+                className="w-14"
+                width={500}
+                height={500}
+                alt="logo"
+              />
+              SQLite
             </li>
           </ul>
         </motion.div>

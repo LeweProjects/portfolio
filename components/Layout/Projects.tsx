@@ -4,6 +4,8 @@ import Link from "next/link";
 import React, { Suspense, useRef, useState } from "react";
 import reactIcon from "../../app/images/React-icon.png";
 import nextJs from "../../app/images/next-js.svg";
+import Laravel from "../../app/images/laravel.png";
+import PHP from "../../app/images/PHP-logo.svg.webp";
 import nodeJs from "../../app/images/nodejs.webp";
 import javaScript from "../../app/images/JavaScript.png";
 import { headerProps } from "@/app/headerProps";
@@ -269,23 +271,23 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
               <div className="flex projectDetails flex-wrap items-end justify-center space-x-3 space-y-3">
                 <div className="flex flex-col items-center">
                   <Image
-                    src={nextJs}
+                    src={Laravel}
                     width={500}
                     height={500}
                     className="w-16"
                     alt="logo"
                   />
-                  NextJS
+                  Laravel
                 </div>
                 <div className="flex flex-col items-center">
                   <Image
-                    src={nodeJs}
+                    src={PHP}
                     width={500}
                     height={500}
                     className="w-16"
                     alt="logo"
                   />
-                  Node.js
+                  PHP
                 </div>
                 <div className="tw flex flex-col items-center">
                   <img

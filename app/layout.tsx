@@ -15,10 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <head style={{ overflowX: "hidden" }}>
         <title>MARVELL</title>
       </head>
-      <body className={inter.className} style={{ overflowX: "hidden" }}>
+      <body className={inter.className}>
         <main>
           {children}
           <Analytics />

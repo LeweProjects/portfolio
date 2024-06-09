@@ -42,18 +42,14 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
   };
 
   //hide scroll until animation is finished
-  React.useEffect(() => {
-    document.documentElement.style.overflowX = "hidden";
-    document.documentElement.style.overflowY = "hidden";
-    setTimeout(() => {
-      document.documentElement.style.overflowY = "unset";
-    }, 4500);
-  }, []);
+  // React.useEffect(() => {
+
+  // }, []);
 
   return (
     <motion.section
       ref={home}
-      className="heroContainer font-semibold w-full
+      className="heroContainer font-semibold w-full overflow-hidden
       bg-center bg-[length:2150px_1000px] whitespace-break-spaces"
       style={{
         backgroundImage: `url(${hero.src})`,
@@ -284,7 +280,7 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
         </motion.div>
 
         <motion.div
-          animate={{ x: isLogoInView ? 0 : 355, opacity: isLogoInView ? 1 : 0 }}
+          animate={{ x: isLogoInView ? 0 : 355, opacity: isLogoInView ? 1 : 0, visibility: isLogoInView ? "visible": "hidden" }}
           transition={{ duration: 1, type: "spring" }}
         >
           <motion.button
