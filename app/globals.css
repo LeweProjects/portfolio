@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-700 text-white;
+  @apply bg-zinc-700 text-white overflow-x-hidden;
 }
 .box {
   clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);

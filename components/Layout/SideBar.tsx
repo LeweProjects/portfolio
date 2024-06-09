@@ -38,7 +38,7 @@ const SideBar: React.FC<sideBarProps> = ({
 
       <motion.div
         animate={{ opacity: openSide ? 1 : 0, visibility: openSide ? "visible":"hidden" }}
-        className="absolute bg-black bg-opacity-30 backdrop-blur-md flex flex-col items-start w-screen h-[180vw] "
+        className="absolute bg-black bg-opacity-30 backdrop-blur-md flex flex-col items-start w-screen h-screen "
       ></motion.div>
       <motion.div
         animate={openSide ? { translateX: 0 } : { translateX: -352 }}
