@@ -2,12 +2,12 @@
 //import * as _ from "lodash";
 import Image from "next/image";
 
-import Projects from "@/components/Layout/Projects";
-import NavBar from "../components/Layout/NavBar";
+import Projects from "@/components/Layout/Projects/Projects";
+import NavBar from "../components/Layout/Navigation/NavBar";
 import useRefForInView from "./hooks/useRefForInView";
-import Footer from "@/components/Layout/Footer";
-import HeroSection from "@/components/Layout/HeroSection";
-import Skills from "@/components/Layout/Skills";
+import Footer from "@/components/Layout/Footer/Footer";
+import HeroSection from "@/components/Layout/Hero Section/HeroSection";
+import Skills from "@/components/Layout/Skills/Skills";
 
 const Home = () => {
   const {
