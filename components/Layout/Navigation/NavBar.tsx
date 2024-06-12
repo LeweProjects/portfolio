@@ -3,21 +3,14 @@ import { useProjectsRef } from "@/app/functions/refContext";
 import { useInView, motion, useScroll, useTransform } from "framer-motion";
 import React, { createRef, useEffect, useRef, useState } from "react";
 import { headerProps } from "@/app/headerProps";
-import SideBar from "./SideBar";
+import SideBar from "./Sidebar/SideBar";
 
 const NavBar: React.FC<headerProps> = ({
-  projects,
-  home,
-  contacts,
-  about,
-  skills,
   isHomeInView,
   isProjectInView,
-  isSomeProjectInView,
   isSkillsInView,
   isContactsInView,
   isAboutInView,
-  isLogoInView,
 }) => {
   const [xAxis, setXAxis] = useState(Number);
   const [fonts, setFonts] = useState({
@@ -47,24 +40,7 @@ const NavBar: React.FC<headerProps> = ({
     section?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
-  function scrollToProjects(): void {
-    const section = document.getElementById("skills");
-    section?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-  // useEffect(() => {
-  //   if (isHomeInView !== true) {
-  //     scrollToProjects();
-  //     console.log("true")
-  //   } else if (isAboutInView === true){
-  //     scrollToProjects();
-  //     //console.log("true")
-  //   }
-  // }, [isHomeInView, isAboutInView]);
-
   useEffect(() => {
-    // console.log("projects: " + isProjectInView);
-    // console.log("contacts: " + isContactsInView);
-    // console.log("about: " + isAboutInView);
     if (isHomeInView) {
       setXAxis(170);
       setFonts((prev) => {
@@ -165,7 +141,8 @@ const NavBar: React.FC<headerProps> = ({
   const [openSide, setOpenSide] = useState(false);
 
   React.useEffect(() => {
-    document.documentElement.style.overflowY = "clip";
+    document.getElementById("logo")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    document.documentElement.style.overflowY = "hidden";
     setTimeout(() => {
       document.documentElement.style.overflowY = "unset";
     }, 4500);
@@ -173,6 +150,7 @@ const NavBar: React.FC<headerProps> = ({
 
   return (
     <>
+      {/* @ts-ignore */}
       <SideBar
         scrollTo={scrollTo}
         setOpenSide={setOpenSide}

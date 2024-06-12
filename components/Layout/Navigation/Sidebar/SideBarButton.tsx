@@ -1,5 +1,6 @@
 import React from "react";
-const Path = (props) => (
+import { sideBarProps } from "../sideBarProps";
+const Path = (props: any) => (
   <path
     fill="transparent"
     strokeWidth="3"
@@ -9,7 +10,7 @@ const Path = (props) => (
   />
 );
 
-const SidBarButton = ({ toggle }) => {
+const SidBarButton: React.FC<sideBarProps> = ({ toggle }) => {
   return (
     <button onClick={toggle} className="mt-5 ml-3 rounded-full absolute z-40">
       <div className=" bg-zinc-900 rounded-full w-14 h-14 flex justify-center items-center">

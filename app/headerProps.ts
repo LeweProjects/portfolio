@@ -1,5 +1,4 @@
-import { useInView } from "framer-motion";
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 
 export interface headerProps {
   logo: React.MutableRefObject<any>;

@@ -1,8 +1,7 @@
-import Link from "next/link";
 import React from "react";
-import { sideBarProps } from "@/app/sideBarProps";
+import { sideBarProps } from "../sideBarProps";
 import useMenuAnimation from "@/app/hooks/useMenuAnimation";
-import SideBarButton from "@/components/SideBarButton";
+import SideBarButton from './SideBarButton';
 import { motion } from "framer-motion";
 
 const SideBar: React.FC<sideBarProps> = ({
@@ -29,15 +28,11 @@ const SideBar: React.FC<sideBarProps> = ({
   return (
     <div className="sidebar invisible">
       <div ref={scope}>
+        {/* @ts-ignore */}
         <SideBarButton toggle={toggle} />
       </div>
-      {/* <button
-        onClick={() => setOpenSide(!openSide)}
-        className="bg-zinc-900 flex absolute mt-3 ml-3 rounded-full justify-center z-40 items-center p-3 w-16 h-16"
-      ></button> */}
-
       <motion.div
-        animate={{ opacity: openSide ? 1 : 0, visibility: openSide ? "visible":"hidden" }}
+        animate={{ opacity: openSide ? 1 : 0, visibility: openSide ? "visible" : "hidden" }}
         className="absolute bg-black bg-opacity-30 backdrop-blur-md flex flex-col items-start w-screen h-screen "
       ></motion.div>
       <motion.div

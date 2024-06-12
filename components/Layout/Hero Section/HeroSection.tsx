@@ -1,50 +1,13 @@
 "use client";
-import React, { useRef, useState } from "react";
-import { Orbitron } from "next/font/google";
-import { motion, useInView } from "framer-motion";
-import { IoCodeSlashOutline } from "react-icons/io5";
-import hero from "../../app/images/hero.jpeg";
-import { GoArrowRight } from "react-icons/go";
-import splitText from "@/app/utils/splitText";
-import { relative } from "path";
+import React from "react";
+import { motion } from "framer-motion";
+import hero from "@/app/images/hero.jpeg";
 import { headerProps } from "@/app/headerProps";
-
-const inter = Orbitron({
-  subsets: ["latin"],
-});
-
-const greet = "Hello, I am";
-const myName = "Marvell";
-const define = "a full-stack developer";
+import ViewProjectsButton from "./ViewProjectsButton";
+import TextLayout from "./TextLayout";
+import Logo from "./Logo";
 
 const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
-  //texts broke into characters
-  const greetChar = splitText(greet);
-  const myNameChar = splitText(myName);
-  const defineChar = splitText(define);
-
-  //button function
-  function scrollTo(id: string): void {
-    const section = document.getElementById(id);
-    section?.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-
-  //text animation
-  const textAnimation = {
-    hidden: {
-      opacity: 0,
-      y: -30,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
-  //hide scroll until animation is finished
-  // React.useEffect(() => {
-
-  // }, []);
 
   return (
     <motion.section
@@ -55,44 +18,9 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
         backgroundImage: `url(${hero.src})`,
       }}
     >
-      <motion.div className="w-full min-h-[56.1rem] flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25">
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{
-            opacity: isLogoInView ? 1 : 0,
-            y: isLogoInView ? 0 : -100,
-          }}
-          transition={{ duration: 0.9, type: "spring" }}
-          className="relative -mt-20"
-        >
-          <div className="border-4 border-white rounded-full p-[68px] absolute ml-[56px] mt-[56px]" />
-          <div className="border-4 border-white rounded-full p-9 absolute ml-[87px] mt-[87px] bg-white" />
-
-          <motion.div ref={logo} viewport={{ margin: "-5000px" }} className="">
-            <IoCodeSlashOutline className="text-5xl text-black ml-[104px] mt-[104px] absolute" />
-          </motion.div>
-
-          <motion.svg
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, ease: "linear", repeat: Infinity }}
-            viewBox="0 0 400 400"
-            className="w-64"
-          >
-            <defs>
-              <path
-                id="MyPath"
-                d="M 180, 200 m -60, 0 a 60,60 0 0,1 160,0 a 60,60 0 0,1 -160,0"
-                className="stroke-2"
-              />
-            </defs>
-
-            <text fill="#fff">
-              <textPath xlinkHref="#MyPath" className=" text-lg">
-                MARVELLPORTFOLIO ★ MARVELLPORTFOLIO ★
-              </textPath>
-            </text>
-          </motion.svg>
-        </motion.div>
+      <motion.div className="w-full min-h-screen flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25">
+        <Logo isLogoInView={isLogoInView} logo={logo} />
+        {/* Top line light blue */}
         <motion.div
           initial={
             isLogoInView && {
@@ -128,6 +56,7 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
           [--x-animate-top-lightblue:-40rem] [--y-animate-top-lightblue:-13rem]
           bg-[#D4F0FC] -rotate-45 lines"
         />
+        {/* Top line solid blue */}
         <motion.div
           initial={
             isLogoInView && {
@@ -162,6 +91,7 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
           [--x-animate-top-blue:-40rem] [--y-animate-top-blue:-12rem]
           p-1 bg-[#02A9F7] -rotate-45 -translate-x-[53rem] lines"
         />
+        {/* bottom line light blue */}
         <motion.div
           initial={
             isLogoInView && {
@@ -194,6 +124,7 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
           [--x-animate-bottom-lightblue:42.2rem] [--y-animate-bottom-lightblue:12.3rem]
           bg-[#D4F0FC] -rotate-45 z-20 lines box1"
         />
+        {/* bottom line solid blue */}
         <motion.div
           initial={
             isLogoInView && {
@@ -228,72 +159,8 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
           [--x-animate-bottom-blue:40.7rem] [--y-animate-bottom-blue:11.4rem]
           -rotate-45 translate-x-[53rem] lines box2"
         />
-        <motion.div
-          animate={{
-            opacity: isLogoInView ? 1 : 0,
-            x: isLogoInView ? 0 : -300,
-          }}
-          transition={{ duration: 1, type: "spring", delay: 0.3 }}
-        >
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            transition={{
-              staggerChildren: 0.09,
-              type: "spring",
-              delayChildren: 0.4,
-            }}
-            className={`${inter.className} hero 
-          text-7xl -mt-8 text-center  leading-tight`}
-          >
-            <motion.div>
-              {greetChar.map((char, i) => (
-                <motion.span
-                  key={i}
-                  className="inline-block"
-                  variants={textAnimation}
-                >
-                  {char}
-                </motion.span>
-              ))}{" "}
-              {myNameChar.map((char, i) => (
-                <motion.span
-                  key={i}
-                  variants={textAnimation}
-                  className="text-[#02A9F7] italic inline-block"
-                >
-                  {char}
-                </motion.span>
-              ))}
-              <br />
-              {defineChar.map((char, i) => (
-                <motion.span
-                  key={i}
-                  className="inline-block"
-                  variants={textAnimation}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </motion.div>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          animate={{ x: isLogoInView ? 0 : 355, opacity: isLogoInView ? 1 : 0, visibility: isLogoInView ? "visible": "hidden" }}
-          transition={{ duration: 1, type: "spring" }}
-        >
-          <motion.button
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, type: "spring", delay: 4 }}
-            onClick={() => scrollTo("projects")}
-            className="viewButton flex items-center mt-10 px-6 py-4 hover:bg-white hover:text-black
-             transition-colors duration-150 border-[3px] text-2xl font-normal"
-          >
-            view my works <GoArrowRight className="text-3xl" />
-          </motion.button>
-        </motion.div>
+        <TextLayout isLogoInView={isLogoInView} logo={logo} />
+        <ViewProjectsButton isLogoInView={isLogoInView} logo={logo} />
       </motion.div>
     </motion.section>
   );

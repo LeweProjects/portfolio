@@ -1,11 +1,11 @@
 import React from "react";
-import reactIcon from "../../app/images/React-icon.png";
-import nextJs from "../../app/images/next-js.svg";
-import Laravel from "../../app/images/laravel.png";
-import PHP from "../../app/images/PHP-logo.svg.webp";
-import Vite from "../../app/images/Vitejs-logo.svg.png";
-import nodeJs from "../../app/images/nodejs.webp";
-import SQLite from "../../app/images/Sqlite-square-icon.svg.png";
+import reactIcon from "@/app/images/React-icon.png";
+import nextJs from "@/app/images/next-js.svg";
+import Laravel from "@/app/images/laravel.png";
+import PHP from "@/app/images/PHP-logo.svg.webp";
+import Vite from "@/app/images/Vitejs-logo.svg.png";
+import nodeJs from "@/app/images/nodejs.webp";
+import SQLite from "@/app/images/Sqlite-square-icon.svg.png";
 import { motion } from "framer-motion";
 import { headerProps } from "@/app/headerProps";
 import Image from "next/image";
