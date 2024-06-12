@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
 import { Orbitron } from "next/font/google";
-import "./globals.css";
+import "./style/globals.css";
+import "./style/responsive.css";
 import { Analytics } from "@vercel/analytics/react";
-import { motion } from "framer-motion";
-import logo from "./images/logo.png";
-import { Suspense } from "react";
 
 const inter = Orbitron({ subsets: ["latin"] });
 

@@ -14,7 +14,7 @@ const Mgh: React.FC<projectProps> = ({ showDetails1, openDetails1 }) => {
             >
                 Visit
             </Link>
-            <div className="w-[50vh] h-[25vh] projImage box bg-[length:50vh_25vh] bg-no-repeat bg-[url('./images/MGHsite.png')] bg-white"></div>
+            <div className="w-[50vh] h-[25vh] projImage box bg-[length:50vh_25vh] bg-no-repeat bg-[url('../images/MGHsite.png')] bg-white"></div>
             <h1 className="mt-2 text-xl font-semibold">
                 MGH appointment website
             </h1>

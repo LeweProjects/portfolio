@@ -24,8 +24,8 @@ const useRefForInView = () => {
 
   // const ref = createRef<any>();
   // console.log(ref);
-  const isLogoInView = useInView(logo, {
-    amount: "all",
+  const isLogoInView = useInView(home, {
+    amount: "some",
   });
   const isHomeInView = useInView(home, {
     amount: "all",

@@ -17,7 +17,7 @@ const Portfolio: React.FC<projectProps> = ({ showDetails, openDetails }) => {
             </Link>
             <div
                 className="w-[50vh] h-[25vh] projImage box bg-[length:50vh_25vh]
-     bg-no-repeat bg-[url('./images/portfolio.png')] bg-white"
+     bg-no-repeat bg-[url('../images/portfolio.png')] bg-white"
             ></div>
             <h1 id="projects" className="mt-2 text-xl font-semibold">
                 My Portfolio

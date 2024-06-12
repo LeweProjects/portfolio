@@ -24,7 +24,7 @@ const Skills: React.FC<headerProps> = ({ skills }) => {
         <h1 className="w-fit font-semibold text-5xl tech">TECH-STACKS</h1>
       </div>
 
-      <ul className="stack grid grid-cols-4 gap-x-3 gap-y-5 text-xl items-end">
+      <ul className="stack grid grid-cols-5 gap-x-3 gap-y-5 text-xl items-end">
         <li>
           <Image
             src={reactIcon}

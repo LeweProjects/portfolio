@@ -1,7 +1,4 @@
 "use client";
-//import * as _ from "lodash";
-import Image from "next/image";
-
 import Projects from "@/components/Layout/Projects/Projects";
 import NavBar from "../components/Layout/Navigation/NavBar";
 import useRefForInView from "./hooks/useRefForInView";
@@ -50,7 +47,7 @@ const Home = () => {
 
       <div className="flex flex-col w-full min-h-screen h-full items-center mt-24 tracking-wider">
         {/* @ts-ignore */}
-        <Projects projects={projects} skills={skills} />
+        <Projects projects={projects} />
         {/* @ts-ignore */}
         <Skills skills={skills} />
 

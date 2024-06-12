@@ -19,7 +19,7 @@ const STImart: React.FC<projectProps> = ({ showDetails2, openDetails2 }) => {
             </div>
             <div
                 className="w-[50vh] h-[25vh] projImage bg-right pr-10 bg-origin-padding box bg-[length:50vh_25vh]
-                           bg-no-repeat bg-[url('./images/STImart.png')] bg-white"
+                           bg-no-repeat bg-[url('../images/STImart.png')] bg-white"
             ></div>
             <h1 className="mt-2 text-xl font-semibold">STImart V2</h1>
             <p className="w-[50vh] des">

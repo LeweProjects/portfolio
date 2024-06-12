@@ -1,0 +1,209 @@
+/* .heroContainer {
+    background-image: url("/app/images/hero.jpeg");
+    background-size: cover;
+} */
+@media (max-width: 1400px) {
+  body {
+    @apply overflow-x-hidden;
+  }
+  .lines {
+    @apply /* top thin blue line */
+      [--size-top-blue:46.6rem]
+      [--x-initial-top-blue:-44rem] [--y-initial-top-blue:3.9rem]
+      [--x-animate-top-blue:-30rem] [--y-animate-top-blue:-10rem]
+      /* top thick lightblue line */
+      [--size-top-lightblue:41rem]  
+      [--x-initial-top-lightblue:-15rem] [--y-initial-top-lightblue:-26rem]
+      [--x-animate-top-lightblue:-29.6rem] [--y-animate-top-lightblue:-11.6rem]
+      /* bottom thin blue line */
+      [--size-bottom-blue:31rem]
+      [--x-initial-bottom-blue:44.1rem] [--y-initial-bottom-blue:7.75rem]
+      [--x-animate-bottom-blue:32.9rem] [--y-animate-bottom-blue:18.5rem]
+      /* bottom thick lightblue line */
+      [--size-bottom-lightblue:29.3rem]  
+      [--x-initial-bottom-lightblue:23.5rem] [--y-initial-bottom-lightblue:31rem]
+      [--x-animate-bottom-lightblue:33.7rem] [--y-animate-bottom-lightblue:20.4rem];
+  }
+  .box1 {
+    clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+  }
+  .box2 {
+    clip-path: polygon(0% 0%, 100% 0%, 98.3% 100%, 0% 100%);
+  }
+  .bump {
+    @apply -mb-11;
+  }
+}
+@media (max-width: 1366px) {
+  body {
+    @apply overflow-x-hidden;
+  }
+  .hero {
+    @apply text-6xl;
+  }
+  .lines {
+    @apply /* top thin blue line */
+      [--size-top-blue:48.6rem]
+      [--x-initial-top-blue:-44rem] [--y-initial-top-blue:6.7rem]
+      [--x-animate-top-blue:-27rem] [--y-animate-top-blue:-10rem]
+      /* top thick lightblue line */
+      [--size-top-lightblue:46rem]  
+      [--x-initial-top-lightblue:-11.19rem] [--y-initial-top-lightblue:-27rem]
+      [--x-animate-top-lightblue:-27.6rem] [--y-animate-top-lightblue:-10.6rem]
+      /* bottom thin blue line */
+      [--size-bottom-blue:42.6rem]
+      [--x-initial-bottom-blue:43rem] [--y-initial-bottom-blue:-2.5rem]
+      [--x-animate-bottom-blue:27.8rem] [--y-animate-bottom-blue:12.9rem]
+      /* bottom thick lightblue line */
+      [--size-bottom-lightblue:40.3rem]  
+      [--x-initial-bottom-lightblue:14.2rem] [--y-initial-bottom-lightblue:29rem]
+      [--x-animate-bottom-lightblue:28.7rem] [--y-animate-bottom-lightblue:14.7rem];
+  }
+  .box1 {
+    clip-path: polygon(0 0, 100% 0, 97.5% 100%, 0 100%);
+  }
+  .box2 {
+    clip-path: polygon(0 0, 100% 0, 98.8% 100%, 0 100%);
+  }
+}
+
+@media (max-width: 1280px) {
+  .lines {
+    @apply /* bottom thin blue line */
+      [--size-bottom-blue:40rem]
+      [--x-initial-bottom-blue:43rem] [--y-initial-bottom-blue:-2.5rem]
+      [--x-animate-bottom-blue:25.7rem] [--y-animate-bottom-blue:14.5rem]
+      /* bottom thick lightblue line */
+      [--size-bottom-lightblue:37.5rem]  
+      [--x-initial-bottom-lightblue:14.2rem] [--y-initial-bottom-lightblue:29rem]
+      [--x-animate-bottom-lightblue:26.7rem] [--y-animate-bottom-lightblue:16.2rem];
+  }
+  .box1 {
+    clip-path: polygon(0 0, 100% 0, 97.5% 100%, 0 100%);
+  }
+  .box2 {
+    clip-path: polygon(0 0, 100% 0, 98.8% 100%, 0 100%);
+  }
+}
+@media (max-width: 900px) {
+  .stack {
+    @apply grid-cols-3;
+  }
+}
+
+@media (max-width: 452px) {
+  .lines {
+    @apply /* top thin blue line */
+      [--size-top-blue:25rem]
+      [--x-initial-top-blue:-14.4rem] [--y-initial-top-blue:-11.9rem]
+      [--x-animate-top-blue:-5.6rem] [--y-animate-top-blue:-20.8rem]
+      /* top thick lightblue line */
+      [--size-top-lightblue:22.7rem]  
+      [--x-initial-top-lightblue:-14.8rem] [--y-initial-top-lightblue:-12.8rem]
+      [--x-animate-top-lightblue:-6.6rem] [--y-animate-top-lightblue:-21rem]
+      /* bottom thin blue line */
+      [--size-bottom-blue:24rem]
+      [--x-initial-bottom-blue:14.5rem] [--y-initial-bottom-blue:8.2rem]
+      [--x-animate-bottom-blue:5.8rem] [--y-animate-bottom-blue:16.7rem]
+      /* bottom thick lightblue line */
+      [--size-bottom-lightblue:22rem]  
+      [--x-initial-bottom-lightblue:-1.8rem] [--y-initial-bottom-lightblue:27rem]
+      [--x-animate-bottom-lightblue:6.65rem] [--y-animate-bottom-lightblue:18.5rem];
+  }
+  .box1 {
+    clip-path: polygon(0 0, 100% 0, 95.8% 100%, 0 100%);
+  }
+  .box2 {
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
+  }
+  .hero {
+    @apply text-[27px];
+  }
+  .heroContainer {
+    @apply flex;
+  }
+  /* .head button {
+      @apply bg-black [--fontSizeFocus: 24px]
+    } */
+  .navbar {
+    @apply hidden;
+  }
+  .sidebar {
+    @apply visible sticky top-0 z-40;
+  }
+  #projects {
+    @apply mt-6;
+  }
+  .viewButton {
+    @apply text-xl px-5 py-3;
+  }
+  .projects {
+    @apply grid-cols-1 gap-y-10;
+  }
+  .projImage {
+    @apply w-[43vh] h-[20vh] bg-[length:43vh_20vh];
+  }
+  .des {
+    @apply text-center;
+  }
+  .tech {
+    @apply text-4xl;
+  }
+  /* .stack {
+      @apply grid-cols-3 text-lg;
+    } */
+  .about {
+    @apply text-base w-[90%];
+  }
+  /* .footerContainer {
+      @apply grid-cols-1 px-3 items-center flex flex-col space-y-10;
+    } */
+  .footerContainer ul li {
+    @apply flex items-center;
+  }
+  .medias {
+    @apply text-center;
+  }
+  .med {
+    @apply mb-2;
+  }
+  .head {
+    @apply text-sm;
+  }
+}
+@media (max-width: 375px) {
+  .lines {
+    @apply /* bottom thin blue line */
+      [--size-bottom-blue:20rem]
+      [--x-initial-bottom-blue:11.4rem] [--y-initial-bottom-blue:11rem]
+      [--x-animate-bottom-blue:4.13rem] [--y-animate-bottom-blue:18.4rem]
+      /* bottom thick lightblue line */
+      [--size-bottom-lightblue:18rem]  
+      [--x-initial-bottom-lightblue:-1.8rem] [--y-initial-bottom-lightblue:27rem]
+      [--x-animate-bottom-lightblue:5rem] [--y-animate-bottom-lightblue:20rem];
+  }
+  .box1 {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  }
+  .box2 {
+    clip-path: polygon(0 0, 100% 0, 97.7% 100%, 0 100%);
+  }
+  .hero {
+    @apply text-[23px];
+  }
+  .heroContainer {
+    @apply w-full;
+  }
+  .projects {
+    @apply grid-cols-1 gap-y-10;
+  }
+  .projImage {
+    @apply w-[43vh] h-[20vh] bg-[length:43vh_20vh];
+  }
+  .des {
+    @apply text-sm w-fit;
+  }
+  .head {
+    @apply text-xs;
+  }
+}
