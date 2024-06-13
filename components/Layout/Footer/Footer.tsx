@@ -23,7 +23,7 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
         </div>
         <div className="flex flex-col items-start justify-center ">
           <span className="text-lg">Need help for starting a project?</span>
-          <h1 className="text-[75px] font-semibold w-full text-[#02A9F7]">LET'S TALK</h1>
+          <h1 className="text-[75px] font-semibold w-full text-[#02A9F7]">{"LET'S"} TALK</h1>
           <div className="flex items-center ">
             <MdEmail
               className="icon text-2xl mr-2" />
