@@ -1,7 +1,6 @@
 "use client";
-import { useProjectsRef } from "@/app/functions/refContext";
-import { useInView, motion, useScroll, useTransform } from "framer-motion";
-import React, { createRef, useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import { headerProps } from "@/app/headerProps";
 import SideBar from "./Sidebar/SideBar";
 
@@ -127,6 +126,7 @@ const NavBar: React.FC<headerProps> = ({
         };
       });
     }
+    console.log(isContactsInView)
   }, [
     isHomeInView,
     isProjectInView,

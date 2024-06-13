@@ -19,7 +19,18 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
       }}
     >
       <motion.div className="w-full min-h-screen flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25">
-        <Logo isLogoInView={isLogoInView} logo={logo} />
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{
+            opacity: isLogoInView ? 1 : 0,
+            y: isLogoInView ? 0 : -100,
+          }}
+          ref={logo}
+          transition={{ duration: 0.9, type: "spring" }}
+          className="relative -mt-20"
+        >
+          <Logo isLogoInView={isLogoInView} logo={logo} />
+        </motion.div>
         {/* Top line light blue */}
         <motion.div
           initial={

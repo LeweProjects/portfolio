@@ -24,7 +24,7 @@ const useRefForInView = () => {
 
   // const ref = createRef<any>();
   // console.log(ref);
-  const isLogoInView = useInView(home, {
+  const isLogoInView = useInView(logo, {
     amount: "some",
   });
   const isHomeInView = useInView(home, {
@@ -43,7 +43,7 @@ const useRefForInView = () => {
     amount: "all",
   });
   const isContactsInView = useInView(contacts, {
-    amount: "all",
+    amount: "some",
   });
 
   // React.useEffect(() => {

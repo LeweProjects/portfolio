@@ -1,23 +1,19 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { heroSectionProps } from './heroSectionProps';
 import { IoCodeSlashOutline } from 'react-icons/io5';
 
-const Logo: React.FC<heroSectionProps> = ({ isLogoInView, logo }) => {
+const Logo = () => {
     return (
-
         <>
-            <div className="border-4 border-white rounded-full p-[68px] absolute ml-[56px] mt-[56px]" />
-            <div className="border-4 border-white rounded-full p-9 absolute ml-[87px] mt-[87px] bg-white" />
+            <div className="border-4 border-white rounded-full p-[104px] absolute ml-[5.8rem] mt-[5.8rem]" />
+            <div className="border-4 border-white rounded-full p-[3.8rem] absolute ml-[8.5rem] mt-[8.3rem] bg-white" />
 
             <motion.div id='logo' viewport={{ margin: "-5000px" }} className="">
-                <IoCodeSlashOutline className="text-5xl text-black ml-[104px] mt-[104px] absolute" />
+                <IoCodeSlashOutline className="text-7xl text-black ml-[10.3rem] mt-[10.2rem] absolute" />
             </motion.div>
             <motion.svg
-                animate={{ rotate: 360 }}
-                transition={{ duration: 8, ease: "linear", repeat: Infinity }}
                 viewBox="0 0 400 400"
-                className="w-64"
+                className="w-[25rem]"
             >
                 <defs>
                     <path
@@ -34,7 +30,6 @@ const Logo: React.FC<heroSectionProps> = ({ isLogoInView, logo }) => {
                 </text>
             </motion.svg>
         </>
-
     )
 }
 
