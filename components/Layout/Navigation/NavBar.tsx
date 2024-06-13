@@ -40,7 +40,6 @@ const NavBar: React.FC<headerProps> = ({
   }
 
   useEffect(() => {
-    console.log(isSkillsInView + "kita")
     if (isHomeInView) {
       setXAxis(170);
       setFonts((prev) => {

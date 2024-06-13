@@ -24,7 +24,7 @@ body {
   @apply flex whitespace-break-spaces my-3 items-center;
 }
 .medias ul .li {
-  @apply flex whitespace-break-spaces my-3 space-x-2 items-center;
+  @apply flex whitespace-break-spaces my-3 items-center;
 }
 .projectDetails img {
   @apply w-12;
