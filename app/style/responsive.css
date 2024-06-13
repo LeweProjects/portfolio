@@ -122,9 +122,30 @@
   .heroContainer {
     @apply flex;
   }
-  /* .head button {
-      @apply bg-black [--fontSizeFocus: 24px]
-    } */
+  .footerContainer{
+    @apply h-full;
+  }
+  .footLeft {
+    @apply flex-col items-center justify-center w-full;
+  }
+  .footLogo{
+    @apply -mr-0;
+  }
+  .letsTalk{
+    @apply text-center text-[60px]
+  }
+  .footTextLeft{
+    @apply items-center -mt-10;
+  }
+  .contact {
+    @apply items-center w-full h-full my-3; 
+  }
+  .footerTextBottom{
+    @apply flex-col py-10
+  }
+  .footerTextBottom .cred{
+    @apply text-[12px] whitespace-nowrap mb-3;
+  }
   .navbar {
     @apply hidden;
   }
