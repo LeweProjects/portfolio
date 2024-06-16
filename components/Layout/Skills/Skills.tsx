@@ -6,6 +6,7 @@ import PHP from "@/app/images/PHP-logo.svg.webp";
 import Vite from "@/app/images/Vitejs-logo.svg.png";
 import nodeJs from "@/app/images/nodejs.webp";
 import SQLite from "@/app/images/Sqlite-square-icon.svg.png";
+import mongo from "@/app/images/mongo.webp";
 import { motion } from "framer-motion";
 import { headerProps } from "@/app/headerProps";
 import Image from "next/image";
@@ -179,6 +180,16 @@ const Skills: React.FC<headerProps> = ({ skills }) => {
             alt="logo"
           />
           SQLite
+        </li>
+        <li>
+          <Image
+            src={mongo}
+            className="w-14"
+            width={500}
+            height={500}
+            alt="logo"
+          />
+          mongoDB
         </li>
       </motion.ul>
     </motion.div>
