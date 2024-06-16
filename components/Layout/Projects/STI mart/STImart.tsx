@@ -1,13 +1,17 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import Laravel from '@/app/images/laravel.png';
 import PHP from '@/app/images/PHP-logo.svg.webp';
 import reactIcon from '@/app/images/React-icon.png';
 import Vite from '@/app/images/Vitejs-logo.svg.png';
 import javaScript from '@/app/images/JavaScript.png';
-import { projectProps } from '../projectProps';
 
-const STImart: React.FC<projectProps> = ({ showDetails2, openDetails2 }) => {
+const STImart = () => {
+    const [showDetails2, setShowDetails2] = useState(false);
+    function openDetails2(): void {
+        setShowDetails2(!showDetails2);
+    }
     return (
         <div className="flex flex-col items-center">
             <div

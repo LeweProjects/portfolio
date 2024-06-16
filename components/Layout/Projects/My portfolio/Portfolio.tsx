@@ -1,12 +1,17 @@
+"use client"
 import Image from 'next/image'
+import React, { useState } from 'react'
 import Link from 'next/link'
-import React from 'react'
-import { projectProps } from "../projectProps"
 import nextJs from '@/app/images/next-js.svg';
 import nodeJs from '@/app/images/nodejs.webp';
 import mongo from '@/app/images/mongo.webp';
 
-const Portfolio: React.FC<projectProps> = ({ showDetails, openDetails }) => {
+const Portfolio = () => {
+    const [showDetails, setShowDetails] = useState(false);
+
+    function openDetails(): void {
+        setShowDetails(!showDetails);
+    }
     return (
         <div className="flex flex-col items-center">
             <Link

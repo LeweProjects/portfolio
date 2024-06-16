@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import { headerProps } from "@/app/headerProps";
 import Portfolio from "./My portfolio/Portfolio";
 import Mgh from "./MGH/Mgh";
@@ -7,19 +6,6 @@ import STImart from "./STI mart/STImart";
 import { motion } from 'framer-motion';
 
 const Projects: React.FC<headerProps> = ({ projects }) => {
-  const [showDetails, setShowDetails] = useState(false);
-  const [showDetails1, setShowDetails1] = useState(false);
-  const [showDetails2, setShowDetails2] = useState(false);
-
-  function openDetails(): void {
-    setShowDetails(!showDetails);
-  }
-  function openDetails1(): void {
-    setShowDetails1(!showDetails1);
-  }
-  function openDetails2(): void {
-    setShowDetails2(!showDetails2);
-  }
 
   return (
     <div ref={projects} className="mt-16">
@@ -32,12 +18,9 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
         <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
 
         <div className="projects grid grid-cols-3 gap-x-8 mt-16">
-          {/* @ts-ignore */}
-          <Portfolio showDetails={showDetails} openDetails={openDetails} />
-          {/* @ts-ignore */}
-          <Mgh showDetails1={showDetails1} openDetails={openDetails1} />
-          {/* @ts-ignore */}
-          <STImart showDetails2={showDetails2} openDetails={openDetails2} />
+          <Portfolio/>
+          <Mgh />
+          <STImart />
 
         </div>
       </motion.div>

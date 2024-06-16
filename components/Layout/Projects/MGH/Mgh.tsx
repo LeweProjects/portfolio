@@ -1,11 +1,17 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { projectProps } from '../projectProps'
 import Image from 'next/image'
 import reactIcon from '@/app/images/React-icon.png';
 import nodeJs from '@/app/images/nodejs.webp';
 
-const Mgh: React.FC<projectProps> = ({ showDetails1, openDetails1 }) => {
+const Mgh = () => {
+
+    const [showDetails1, setShowDetails1] = useState(false);
+    function openDetails1(): void {
+        setShowDetails1(!showDetails1);
+    }
     return (
         <div className="flex flex-col items-center">
             <Link
