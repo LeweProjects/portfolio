@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useRef, useContext, useEffect } from "react";
+import React, { createContext, useRef, useContext } from "react";
 
 const ProjectsRefContext =
   createContext<React.RefObject<HTMLDivElement> | null>(null);

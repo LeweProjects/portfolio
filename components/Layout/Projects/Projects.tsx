@@ -4,6 +4,7 @@ import { headerProps } from "@/app/headerProps";
 import Portfolio from "./My portfolio/Portfolio";
 import Mgh from "./MGH/Mgh";
 import STImart from "./STI mart/STImart";
+import { motion } from 'framer-motion';
 
 const Projects: React.FC<headerProps> = ({ projects }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -22,7 +23,11 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
 
   return (
     <div ref={projects} className="mt-16">
-      <div className="flex flex-col items-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ margin: "-200px" }}
+        className="flex flex-col items-center">
         <div className="text-lg">Welcome! these are my</div>
         <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
 
@@ -30,12 +35,12 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
           {/* @ts-ignore */}
           <Portfolio showDetails={showDetails} openDetails={openDetails} />
           {/* @ts-ignore */}
-          <Mgh showDetails1={showDetails1} openDetails={openDetails1}/>
+          <Mgh showDetails1={showDetails1} openDetails={openDetails1} />
           {/* @ts-ignore */}
-          <STImart showDetails2={showDetails2} openDetails={openDetails2}/>
+          <STImart showDetails2={showDetails2} openDetails={openDetails2} />
 
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

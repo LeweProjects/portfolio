@@ -125,7 +125,6 @@ const NavBar: React.FC<headerProps> = ({
         };
       });
     }
-    console.log(isContactsInView)
   }, [
     isHomeInView,
     isProjectInView,

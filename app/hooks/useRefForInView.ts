@@ -1,6 +1,5 @@
 import { useInView } from "framer-motion";
-import React, { createRef, useRef } from "react";
-import { headerProps } from "../headerProps";
+import { useRef } from "react";
 
 const useRefForInView = () => {
   const home = useRef(null);

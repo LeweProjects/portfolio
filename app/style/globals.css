@@ -23,8 +23,8 @@ body {
 .contacts ul li {
   @apply flex whitespace-break-spaces my-3 items-center;
 }
-.medias ul .li {
-  @apply flex whitespace-break-spaces my-3 items-center;
+#medias a .li {
+  @apply flex my-3 items-center hover:scale-125 transition duration-75;
 }
 .projectDetails img {
   @apply w-12;
@@ -32,4 +32,3 @@ body {
 .tw img {
   @apply w-16;
 }
-
