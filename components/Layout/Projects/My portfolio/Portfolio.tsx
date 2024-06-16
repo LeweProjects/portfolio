@@ -4,6 +4,7 @@ import React from 'react'
 import { projectProps } from "../projectProps"
 import nextJs from '@/app/images/next-js.svg';
 import nodeJs from '@/app/images/nodejs.webp';
+import mongo from '@/app/images/mongo.webp';
 
 const Portfolio: React.FC<projectProps> = ({ showDetails, openDetails }) => {
     return (
@@ -91,6 +92,17 @@ const Portfolio: React.FC<projectProps> = ({ showDetails, openDetails }) => {
                         />
                         CSS3
                     </div>
+                    <div className="flex flex-col items-center">
+                        <Image
+                            src={mongo}
+                            className="w-14"
+                            width={500}
+                            height={500}
+                            alt="logo"
+                        />
+                        mongoDB
+                    </div>
+
                 </div>
             </div>
             <div
