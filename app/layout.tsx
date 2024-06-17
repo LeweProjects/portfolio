@@ -16,7 +16,7 @@ export default function RootLayout({
         <title>MARVELL</title>
       </head>
       <body className={inter.className}>
-        <main>
+        <main className="selection:bg-red-600">
           {children}
           <Analytics />
         </main>

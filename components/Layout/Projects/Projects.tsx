@@ -18,7 +18,7 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
         <h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
 
         <div className="projects grid grid-cols-3 gap-x-8 mt-16">
-          <Portfolio/>
+          <Portfolio />
           <Mgh />
           <STImart />
 
