@@ -18,7 +18,7 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
         backgroundImage: `url(${hero.src})`,
       }}
     >
-      <motion.div className="w-full min-h-screen flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25">
+      <motion.div className="w-full min-h-[100svh] flex flex-col items-center justify-center bg-black backdrop-blur-md bg-opacity-25">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{
