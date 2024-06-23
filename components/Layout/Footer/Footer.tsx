@@ -27,7 +27,7 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
         ref={contacts} id="contacts" className="flex footerContainer flex-col h-[35rem] items-center w-full">
         <div className="flex footLeft items-center w-[85%] py-4">
           <motion.div
-            className="-mr-[68px] footLogo">
+            className="-mr-[68px] footLogo overflow-x-hidden">
             {/* @ts-ignore */}
             <Logo />
           </motion.div>

@@ -13,7 +13,7 @@ const Logo = () => {
             </motion.div>
             <motion.svg
                 viewBox="0 0 400 400"
-                className="w-[25rem]"
+                className="w-[25rem] footerLogoSvg"
             >
                 <defs>
                     <path
