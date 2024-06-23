@@ -14,7 +14,7 @@ import useInserMessage from "@/app/hooks/useInserMessage";
 import { ring } from 'ldrs'
 
 const inter = Inter({ subsets: ["latin"] });
-//ring?.register()
+ring?.register()
 
 const Footer: React.FC<headerProps> = ({ contacts }) => {
   const { handleChange, formData, handleSubmit, success, anotherMessage, loading } = useInserMessage()
@@ -28,8 +28,7 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
         ref={contacts} id="contacts" className="flex footerContainer flex-col h-[35rem] items-center w-full">
         <div className="flex footLeft items-center w-[85%] py-4">
           <motion.div
-            className="-mr-[68px] footLogo"
-            style={{ overflowX: "hidden" }}>
+            className="-mr-[68px] footLogo">
             {/* @ts-ignore */}
             <Logo />
           </motion.div>
