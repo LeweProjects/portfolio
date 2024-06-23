@@ -141,7 +141,7 @@
     @apply items-center w-full h-full my-3; 
   }
   .footerTextBottom{
-    @apply flex-col py-10
+    @apply flex-col py-10 mt-0 w-[90%]
   }
   .footerTextBottom .cred{
     @apply text-[12px] whitespace-nowrap mb-3;
@@ -227,4 +227,13 @@
   .head {
     @apply text-xs;
   }
+  .footerTextBreak{
+    @apply block -mb-3;
+  }
+  /* .footerLogoSvg{
+    @apply w-[24rem]
+  } */
+  .form {
+    @apply w-[21rem] my-6
+   }
 }

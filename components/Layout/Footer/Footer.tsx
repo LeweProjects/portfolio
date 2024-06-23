@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const Footer: React.FC<headerProps> = ({ contacts }) => {
   const { handleChange, formData, handleSubmit, success, anotherMessage, loading } = useInserMessage()
-  //ring?.register()
+  ring?.register()
   return (
     <div className="bg-zinc-900">
       <motion.div
@@ -27,7 +27,8 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
         ref={contacts} id="contacts" className="flex footerContainer flex-col h-[35rem] items-center w-full">
         <div className="flex footLeft items-center w-[85%] py-4">
           <motion.div
-            className="-mr-[68px] footLogo overflow-x-hidden">
+            className="-mr-[68px] footLogo"
+            style={{overflowX: "hidden"}}>
             {/* @ts-ignore */}
             <Logo />
           </motion.div>
@@ -65,7 +66,7 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
               <p className="text-4xl uppercase leading-normal font-semibold"> message sent!</p>
               <button onClick={anotherMessage} className="py-2 px-4 bg-zinc-600 mt-3">{"<"} add another message</button>
             </div>) : (
-              <form onSubmit={handleSubmit} className="flex flex-col w-[25rem] justify-center space-y-3 items-center tracking-wider">
+              <form onSubmit={handleSubmit} className="flex flex-col w-[25rem] form justify-center space-y-3 items-center tracking-wider">
                 <input
                   required
                   type="text"
@@ -97,7 +98,8 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
         </div>
         <motion.div
           className="border-t-2 border-white w-[80%] footerTextBottom flex h-full justify-between -mt-5 px-16 items-center">
-          <p className="text-md font-sans cred">© 2024 portfolio by Marvell Ayon |<span className="font-semibold"> All Rights Reserved</span>  | Powered by <span>Next JS</span> </p>
+          <p className="text-md font-sans cred text-center">© 2024 portfolio by Marvell Ayon  <span className="footerTextBreak hidden"><br /></span>
+          | <span className="font-semibold"> All Rights Reserved</span> | Powered by <span>Next JS</span> </p>
           <div className="text-right">
             <div id="medias" className={`${inter.className} flex justify-end items-center space-x-16 text-4xl`}>
               <Link
