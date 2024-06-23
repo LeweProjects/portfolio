@@ -26,7 +26,7 @@ const useInserMessage = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch(`/api/messages`, {
+      const res = await fetch(`https://www.marvellportfolio.site/api/messages`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
