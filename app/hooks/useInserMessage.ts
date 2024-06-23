@@ -33,7 +33,8 @@ const useInserMessage = () => {
       //   origin: '*',
       //   optionsSuccessStatus: 200, // 
       // })
-      const res = await fetch(`https://${url}/api/messages`, {
+      const res = await fetch(`api/messages`, {
+      //const res = await fetch(`https://${url}/api/messages`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
