@@ -14,7 +14,7 @@ import useInserMessage from "@/app/hooks/useInserMessage";
 import { ring } from 'ldrs'
 
 const inter = Inter({ subsets: ["latin"] });
-ring?.register()
+//ring?.register()
 
 const Footer: React.FC<headerProps> = ({ contacts }) => {
   const { handleChange, formData, handleSubmit, success, anotherMessage, loading } = useInserMessage()
