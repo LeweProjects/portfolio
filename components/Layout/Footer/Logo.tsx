@@ -14,7 +14,6 @@ const Logo = () => {
             <motion.svg
                 viewBox="0 0 400 400"
                 className="w-[25rem] footerLogoSvg overflow-hidden"
-                style={{overflowX: "hidden"}}
             >
                 <defs>
                     <path

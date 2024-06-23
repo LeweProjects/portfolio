@@ -14,10 +14,11 @@ import useInserMessage from "@/app/hooks/useInserMessage";
 import { ring } from 'ldrs'
 
 const inter = Inter({ subsets: ["latin"] });
+ring?.register()
 
 const Footer: React.FC<headerProps> = ({ contacts }) => {
   const { handleChange, formData, handleSubmit, success, anotherMessage, loading } = useInserMessage()
-  ring?.register()
+
   return (
     <div className="bg-zinc-900">
       <motion.div
@@ -28,7 +29,7 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
         <div className="flex footLeft items-center w-[85%] py-4">
           <motion.div
             className="-mr-[68px] footLogo"
-            style={{overflowX: "hidden"}}>
+            style={{ overflowX: "hidden" }}>
             {/* @ts-ignore */}
             <Logo />
           </motion.div>
@@ -99,7 +100,7 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
         <motion.div
           className="border-t-2 border-white w-[80%] footerTextBottom flex h-full justify-between -mt-5 px-16 items-center">
           <p className="text-md font-sans cred text-center">© 2024 portfolio by Marvell Ayon  <span className="footerTextBreak hidden"><br /></span>
-          | <span className="font-semibold"> All Rights Reserved</span> | Powered by <span>Next JS</span> </p>
+            | <span className="font-semibold"> All Rights Reserved</span> | Powered by <span>Next JS</span> </p>
           <div className="text-right">
             <div id="medias" className={`${inter.className} flex justify-end items-center space-x-16 text-4xl`}>
               <Link
