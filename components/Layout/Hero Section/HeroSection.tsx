@@ -8,6 +8,14 @@ import TextLayout from "./TextLayout";
 import Logo from "./Logo";
 
 const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
+  
+  React.useEffect(() => {
+    document.getElementById("logo")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    document.documentElement.style.overflowY = "hidden";
+    setTimeout(() => {
+      document.documentElement.style.overflowY = "unset";
+    }, 4500);
+  }, []);
 
   return (
     <motion.section

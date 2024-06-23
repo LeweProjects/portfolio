@@ -139,14 +139,6 @@ const NavBar: React.FC<headerProps> = ({
 
   const [openSide, setOpenSide] = useState(false);
 
-  React.useEffect(() => {
-    document.getElementById("logo")?.scrollIntoView({ behavior: "smooth", block: "center" });
-    document.documentElement.style.overflowY = "hidden";
-    setTimeout(() => {
-      document.documentElement.style.overflowY = "unset";
-    }, 4500);
-  }, []);
-
   return (
     <>
       {/* @ts-ignore */}
