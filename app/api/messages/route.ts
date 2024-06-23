@@ -1,7 +1,6 @@
 import Message from "@/app/models/message";
 import connectMongoDb from "../mongodb";
 import { NextResponse } from "next/server";
-import NextCors from 'nextjs-cors';
 
 export async function POST(req: any) {
 
