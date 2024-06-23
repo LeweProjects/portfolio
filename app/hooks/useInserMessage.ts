@@ -1,6 +1,7 @@
 "use client";
 import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+//import NextCors from 'nextjs-cors';
 
 const useInserMessage = () => {
   const url = process.env.URL;
@@ -12,7 +13,6 @@ const useInserMessage = () => {
     email: "",
     message: "",
   });
-  console.log(url)
   function handleChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void {
@@ -23,12 +23,17 @@ const useInserMessage = () => {
       };
     });
   }
-  async function handleSubmit(res:any, e: FormEvent<HTMLFormElement>): Promise<any> {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>): Promise<any> {
     e.preventDefault();
     setLoading(true);
 
     try {
-      await fetch(`https://${url}/api/messages`, {
+      // await NextCors (req, res, {
+      //   methods: ['POST'], 
+      //   origin: '*',
+      //   optionsSuccessStatus: 200, // 
+      // })
+      const res = await fetch(`https://${url}/api/messages`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
