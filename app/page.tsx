@@ -6,6 +6,7 @@ import Footer from "@/components/Layout/Footer/Footer";
 import HeroSection from "@/components/Layout/Hero Section/HeroSection";
 import Skills from "@/components/Layout/Skills/Skills";
 import About from '../components/Layout/About/About';
+import React from "react";
 
 const Home = () => {
   const {

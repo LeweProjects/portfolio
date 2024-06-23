@@ -3,6 +3,7 @@ import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const useInserMessage = () => {
+  const url = process.env.URL;
   const router = useRouter();
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -11,6 +12,7 @@ const useInserMessage = () => {
     email: "",
     message: "",
   });
+  console.log(url)
   function handleChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void {
@@ -20,13 +22,13 @@ const useInserMessage = () => {
         [event.target.name]: event.target.value,
       };
     });
-    console.log(formData);
   }
-  async function handleSubmit(e: FormEvent<HTMLFormElement>): Promise<any> {
+  async function handleSubmit(res:any, e: FormEvent<HTMLFormElement>): Promise<any> {
     e.preventDefault();
     setLoading(true);
+
     try {
-      const res = await fetch(`https://www.marvellportfolio.site/api/messages`, {
+      await fetch(`https://${url}/api/messages`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

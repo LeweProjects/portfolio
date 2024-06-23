@@ -9,6 +9,7 @@ const connectMongoDb = async () => {
       })
       .then(() => {
         console.log("connected succesfully");
+        console.log(process.env.NEXT_PUBLIC_DOMAIN + process.env.MONGODB_URI)
       });
   } catch (error) {
     console.log(error);
