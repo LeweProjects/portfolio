@@ -2,6 +2,11 @@
     background-image: url("/app/images/hero.jpeg");
     background-size: cover;
 } */
+@media (max-width: 1600px) {
+  .footLeft{
+    @apply w-full
+  }
+}
 @media (max-width: 1400px) {
   body {
     @apply overflow-x-hidden;
@@ -65,6 +70,9 @@
   .box2 {
     clip-path: polygon(0 0, 100% 0, 98.8% 100%, 0 100%);
   }
+  .letsTalk{
+    @apply text-[70px]
+  }
 }
 
 @media (max-width: 1280px) {
@@ -83,6 +91,9 @@
   }
   .box2 {
     clip-path: polygon(0 0, 100% 0, 98.8% 100%, 0 100%);
+  }
+  .letsTalk{
+    @apply text-[65px]
   }
 }
 @media (max-width: 900px) {
@@ -236,4 +247,7 @@
   .form {
     @apply w-[21rem] my-6
    }
+   .letsTalk{
+    @apply text-[50px] mt-5
+  }
 }
