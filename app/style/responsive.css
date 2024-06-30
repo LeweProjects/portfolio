@@ -39,7 +39,9 @@
     @apply -mb-11;
   }
 }
-@media (max-width: 1366px) {
+@media screen and (max-width: 1366px),
+       screen and (max-height: 768px) {
+        
   body {
     @apply overflow-x-hidden;
   }

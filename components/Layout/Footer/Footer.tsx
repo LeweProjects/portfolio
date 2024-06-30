@@ -26,7 +26,7 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ margin: "-200px" }}
-        ref={contacts} id="contacts" className="flex footerContainer flex-col h-[35rem] items-center w-full">
+        className="flex footerContainer flex-col h-[35rem] items-center w-full">
         <div className="flex footLeft items-center w-[85%] py-4">
           <motion.div
             className="-mr-[68px] footLogo">
@@ -36,7 +36,7 @@ const Footer: React.FC<headerProps> = ({ contacts }) => {
           <motion.div
             className="flex flex-col w-full footTextLeft items-start justify-center tracking-wide">
             <span className="text-lg -mb-3">Need help for starting a project?</span>
-            <h1 className="text-[75px] letsTalk font-semibold w-full text-[#02A9F7]">{"LET'S"} TALK</h1>
+            <h1 ref={contacts} id="contacts" className="text-[75px] letsTalk font-semibold w-full text-[#02A9F7]">{"LET'S"} TALK</h1>
             <div className="flex flex-col items-start contact">
               <div className="flex items-center ">
                 <MdEmail

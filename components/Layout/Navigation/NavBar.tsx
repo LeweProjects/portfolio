@@ -13,8 +13,8 @@ const NavBar: React.FC<headerProps> = ({
 }) => {
   const [xAxis, setXAxis] = useState(Number);
   const [fonts, setFonts] = useState({
-    home: "",
-    projects: "",
+    home: "24px",
+    projects: "14px",
     skills: "",
     about: "",
     contacts: "",

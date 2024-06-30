@@ -19,7 +19,7 @@ const HeroSection: React.FC<headerProps> = ({ home, logo, isLogoInView }) => {
 
   return (
     <motion.section
-      ref={home}
+
       className="heroContainer font-semibold w-full overflow-hidden
       bg-center bg-[length:2150px_1000px] whitespace-break-spaces"
       style={{
