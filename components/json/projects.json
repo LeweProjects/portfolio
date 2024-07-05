@@ -3,21 +3,62 @@
 		"name": "My Portfolio",
 		"description": "My personal website that contains my information and projects.",
 		"image": "portfolio.png",
-		"tools": [{ "name": "React JS", "icon": "React-icon.png" }]
+		"link": "/",
+		"status": "open",
+		"tools": [
+			{ "name": "React JS", "icon": "React-icon.png" },
+			{ "name": "Node.JS", "icon": "nodejs.webp" },
+			{ "name": "Next JS", "icon": "next-js-logo.png" },
+			{ "name": "TypeScript", "icon": "Typescript_logo_2020.svg.png" },
+			{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
+			{ "name": "CSS3", "icon": "CSS3_logo.svg.png" },
+			{
+				"name": "TailwindCSS",
+				"icon": "tailwind-css-logo-5AD4175897-seeklogo.com.png"
+			},
+			{ "name": "MongoDB", "icon": "mongo.webp" }
+		]
 	},
 	{
 		"name": "MGH appointment website",
 		"description": "A website made for our capstone project.",
 		"image": "MGHsite.png",
-		"tools": [{ "name": "React JS", "icon": "React-icon.png" }]
+		"link": "https://leweprojects.github.io/MGHsite/",
+		"status": "open",
+		"tools": [
+			{ "name": "React JS", "icon": "React-icon.png" },
+			{ "name": "Node.JS", "icon": "nodejs.webp" },
+			{ "name": "JavaScript", "icon": "JavaScript.png" },
+			{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
+			{ "name": "CSS3", "icon": "CSS3_logo.svg.png" },
+			{
+				"name": "TailwindCSS",
+				"icon": "tailwind-css-logo-5AD4175897-seeklogo.com.png"
+			},
+			{
+				"name": "Supabase",
+				"icon": "supabase-logo-DCC676FFE2-seeklogo.com.png"
+			}
+		]
 	},
 	{
 		"name": "STImart V2",
 		"description": "This is a remake project for my first react project. An E-commerce website made for our school's proware.",
 		"image": "STImart.png",
+		"status": "close",
 		"tools": [
 			{ "name": "React JS", "icon": "React-icon.png" },
-			{ "name": "Node.JS", "icon": "React-icon.png" }
+			{ "name": "Node.JS", "icon": "nodejs.webp" },
+			{ "name": "JavaScript", "icon": "JavaScript.png" },
+			{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
+			{ "name": "CSS3", "icon": "CSS3_logo.svg.png" },
+			{
+				"name": "TailwindCSS",
+				"icon": "tailwind-css-logo-5AD4175897-seeklogo.com.png"
+			},
+			{ "name": "PHP", "icon": "PHP-logo.svg.webp" },
+			{ "name": "Laravel", "icon": "laravel.png" },
+			{ "name": "SQLite", "icon": "1200px-Sqlite-square-icon.svg.png" }
 		]
 	}
 ]

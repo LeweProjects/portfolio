@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import nextJs from "@/app/images/next-js.svg";
-import nodeJs from "@/app/images/nodejs.webp";
-import mongo from "@/app/images/mongo.webp";
+// import nextJs from "@/app/images/next-js.svg";
+// import nodeJs from "@/app/images/nodejs.webp";
+// import mongo from "@/app/images/mongo.webp";
 import useJsonMapping from "@/app/hooks/useJsonMapping";
 
 interface toolProps {
@@ -35,73 +35,6 @@ const MoreDetails: React.FC<toolProps> = ({ tools }) => {
 							{data?.name}
 						</div>
 					))}
-					<div className="flex flex-col items-center">
-						<Image
-							src={nextJs}
-							width={500}
-							height={500}
-							className="w-16"
-							alt="logo"
-						/>
-					</div>
-					<div className="flex flex-col items-center">
-						<Image
-							src={nodeJs}
-							width={500}
-							height={500}
-							className="w-16"
-							alt="logo"
-						/>
-						Node.js
-					</div>
-					<div className="tw flex flex-col items-center">
-						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png"
-							className="tw"
-							alt="logo"
-						/>
-						TailwindCSS
-					</div>
-					<div className="flex flex-col items-center">
-						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
-							width={500}
-							height={500}
-							className="w-16"
-							alt="logo"
-						/>
-						TypeScript
-					</div>
-					<div className="flex flex-col items-center">
-						<img
-							src="https://cdn-icons-png.flaticon.com/512/732/732212.png"
-							width={500}
-							height={500}
-							className="w-16"
-							alt="logo"
-						/>
-						HTML5
-					</div>
-					<div className="flex flex-col items-center">
-						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
-							width={500}
-							height={500}
-							className="w-16"
-							alt="logo"
-						/>
-						CSS3
-					</div>
-					<div className="flex flex-col items-center">
-						<Image
-							src={mongo}
-							className="w-14"
-							width={500}
-							height={500}
-							alt="logo"
-						/>
-						mongoDB
-					</div>
 				</div>
 			</div>
 			<div
