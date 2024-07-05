@@ -1,0 +1,23 @@
+[
+	{ "name": "React JS", "icon": "React-icon.png" },
+	{ "name": "Node.JS", "icon": "nodejs.webp" },
+	{ "name": "Next JS", "icon": "next-js-logo.png" },
+	{ "name": "JavaScript", "icon": "JavaScript.png" },
+	{ "name": "TypeScript", "icon": "Typescript_logo_2020.svg.png" },
+	{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
+	{ "name": "CSS3", "icon": "CSS3_logo.svg.png" },
+	{
+		"name": "TailwindCSS",
+		"icon": "tailwind-css-logo-5AD4175897-seeklogo.com.png"
+	},
+	{ "name": "SVELTE", "icon": "1200px-Svelte_Logo.svg.png" },
+	{ "name": "Supabase", "icon": "supabase-logo-DCC676FFE2-seeklogo.com.png" },
+	{ "name": "MySQL", "icon": "download.png" },
+	{ "name": "Figma", "icon": "1667px-Figma-logo.svg.png" },
+	{ "name": "Vite JS", "icon": "Vitejs-logo.svg (1).png" },
+	{ "name": "Vue", "icon": "Vue.js_Logo_2.svg.png" },
+	{ "name": "PHP", "icon": "PHP-logo.svg.webp" },
+	{ "name": "Laravel", "icon": "laravel.png" },
+	{ "name": "SQLite", "icon": "1200px-Sqlite-square-icon.svg.png" },
+	{ "name": "MongoDB", "icon": "mongo.webp" }
+]

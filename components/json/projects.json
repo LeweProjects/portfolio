@@ -1,0 +1,23 @@
+[
+	{
+		"name": "My Portfolio",
+		"description": "My personal website that contains my information and projects.",
+		"image": "portfolio.png",
+		"tools": [{ "name": "React JS", "icon": "React-icon.png" }]
+	},
+	{
+		"name": "MGH appointment website",
+		"description": "A website made for our capstone project.",
+		"image": "MGHsite.png",
+		"tools": [{ "name": "React JS", "icon": "React-icon.png" }]
+	},
+	{
+		"name": "STImart V2",
+		"description": "This is a remake project for my first react project. An E-commerce website made for our school's proware.",
+		"image": "STImart.png",
+		"tools": [
+			{ "name": "React JS", "icon": "React-icon.png" },
+			{ "name": "Node.JS", "icon": "React-icon.png" }
+		]
+	}
+]
