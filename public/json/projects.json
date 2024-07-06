@@ -20,6 +20,25 @@
 		]
 	},
 	{
+		"name": "Through The Glass - Blogs Page",
+		"description": "My personal website that contains my information and projects.",
+		"image": "TTGBlogs.png",
+		"link": "https://through-the-glass-blogs.vercel.app/Blogs",
+		"status": "open",
+		"tools": [
+			{ "name": "React JS", "icon": "React-icon.png" },
+			{ "name": "Node.JS", "icon": "nodejs.png" },
+			{ "name": "Next JS", "icon": "next-js-logo.png" },
+			{ "name": "JavaScript", "icon": "JavaScript.png" },
+			{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
+			{ "name": "CSS3", "icon": "CSS3_logo.svg.png" },
+			{
+				"name": "TailwindCSS",
+				"icon": "tailwind-css-logo-5AD4175897-seeklogo.com.png"
+			}
+		]
+	},
+	{
 		"name": "MGH appointment website",
 		"description": "A website made for our capstone project.",
 		"image": "MGHsite.png",

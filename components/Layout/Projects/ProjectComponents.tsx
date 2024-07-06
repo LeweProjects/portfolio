@@ -7,6 +7,7 @@ import mgh from "@/app/images/MGHsite.png";
 import portfolio from "@/app/images/portfolio.png";
 import { StaticImageData } from "next/image";
 import stimart from "@/app/images/STImart.png";
+import ttg from "@/app/images/TTGBlogs.png"
 
 type ImageMap = {
 	[key: string]: StaticImageData;
@@ -16,6 +17,7 @@ const images: ImageMap = {
 	"portfolio.png": portfolio,
 	"MGHsite.png": mgh,
 	"STImart.png": stimart,
+	"TTGBlogs.png": ttg,
 };
 
 const Portfolio = () => {
@@ -44,7 +46,7 @@ const Portfolio = () => {
 				className={`w-[50vh] h-[25vh] projImage box bg-[length:50vh_25vh] 
      						bg-no-repeat bg-white`}
 				style={{
-					backgroundImage: `url(${images[data.image].src})`,
+					backgroundImage: `url(${images[data.image]?.src})`,
 				}}
 			></div>
 			<h1 id="projects" className="mt-2 text-xl font-semibold">
