@@ -188,7 +188,7 @@ const NavBar: React.FC<headerProps> = ({
                   color: fonts.projectsC,
                   opacity: fonts.projectsO,
                 }}
-                onClick={() => scrollTo("projectsContainer")}
+                onClick={() => scrollTo("projects")}
                 className="ease-in"
               >
                 Projects

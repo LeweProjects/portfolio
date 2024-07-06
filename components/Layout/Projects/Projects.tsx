@@ -13,7 +13,9 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
 				className="flex flex-col items-center"
 			>
 				<div className="text-lg">Welcome! these are my</div>
-				<h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
+				<h1 id="projects" className="w-fit font-semibold text-5xl">
+					PROJECTS
+				</h1>
 
 				<div className="projects grid grid-cols-3 gap-x-8 mt-16">
 					<ProjectComponents />

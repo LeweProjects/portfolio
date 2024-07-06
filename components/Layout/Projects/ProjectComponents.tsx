@@ -23,7 +23,7 @@ const images: ImageMap = {
 const Portfolio = () => {
 	const { projectsArray } = useJsonMapping();
 	return projectsArray.map((data, i) => (
-		<div key={i} className="flex flex-col items-center">
+		<div key={i} className="flex flex-col items-center mb-10">
 			{data.status == "open" ? (
 				<Link
 					onClick={() => {
