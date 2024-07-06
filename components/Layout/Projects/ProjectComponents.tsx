@@ -20,7 +20,6 @@ const images: ImageMap = {
 
 const Portfolio = () => {
 	const { projectsArray } = useJsonMapping();
-	//const backGroundImagePath = "../../../app/images/";
 	return projectsArray.map((data, i) => (
 		<div key={i} className="flex flex-col items-center">
 			{data.status == "open" ? (
