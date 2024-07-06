@@ -7,7 +7,7 @@
 		"status": "open",
 		"tools": [
 			{ "name": "React JS", "icon": "React-icon.png" },
-			{ "name": "Node.JS", "icon": "nodejs.webp" },
+			{ "name": "Node.JS", "icon": "nodejs.png" },
 			{ "name": "Next JS", "icon": "next-js-logo.png" },
 			{ "name": "TypeScript", "icon": "Typescript_logo_2020.svg.png" },
 			{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
@@ -16,7 +16,7 @@
 				"name": "TailwindCSS",
 				"icon": "tailwind-css-logo-5AD4175897-seeklogo.com.png"
 			},
-			{ "name": "MongoDB", "icon": "mongo.webp" }
+			{ "name": "MongoDB", "icon": "mongo.png" }
 		]
 	},
 	{
@@ -27,7 +27,7 @@
 		"status": "open",
 		"tools": [
 			{ "name": "React JS", "icon": "React-icon.png" },
-			{ "name": "Node.JS", "icon": "nodejs.webp" },
+			{ "name": "Node.JS", "icon": "nodejs.png" },
 			{ "name": "JavaScript", "icon": "JavaScript.png" },
 			{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
 			{ "name": "CSS3", "icon": "CSS3_logo.svg.png" },
@@ -48,7 +48,7 @@
 		"status": "close",
 		"tools": [
 			{ "name": "React JS", "icon": "React-icon.png" },
-			{ "name": "Node.JS", "icon": "nodejs.webp" },
+			{ "name": "Node.JS", "icon": "nodejs.png" },
 			{ "name": "JavaScript", "icon": "JavaScript.png" },
 			{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
 			{ "name": "CSS3", "icon": "CSS3_logo.svg.png" },
@@ -56,7 +56,7 @@
 				"name": "TailwindCSS",
 				"icon": "tailwind-css-logo-5AD4175897-seeklogo.com.png"
 			},
-			{ "name": "PHP", "icon": "PHP-logo.svg.webp" },
+			{ "name": "PHP", "icon": "PHP-logo.png" },
 			{ "name": "Laravel", "icon": "laravel.png" },
 			{ "name": "SQLite", "icon": "1200px-Sqlite-square-icon.svg.png" }
 		]

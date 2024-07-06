@@ -14,9 +14,9 @@
 	{ "name": "Supabase", "icon": "supabase-logo-DCC676FFE2-seeklogo.com.png" },
 	{ "name": "MySQL", "icon": "download.png" },
 	{ "name": "Figma", "icon": "1667px-Figma-logo.svg.png" },
-	{ "name": "Vite JS", "icon": "Vitejs-logo.svg (1).png" },
+	{ "name": "Vite JS", "icon": "Vitejs-logo.png" },
 	{ "name": "Vue", "icon": "Vue.js_Logo_2.svg.png" },
-	{ "name": "PHP", "icon": "PHP-logo.svg.png" },
+	{ "name": "PHP", "icon": "PHP-logo.png" },
 	{ "name": "Laravel", "icon": "laravel.png" },
 	{ "name": "SQLite", "icon": "1200px-Sqlite-square-icon.svg.png" },
 	{ "name": "MongoDB", "icon": "mongo.png" }
