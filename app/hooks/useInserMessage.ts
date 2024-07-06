@@ -1,11 +1,7 @@
 "use client";
 import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
-import { useRouter } from "next/navigation";
-//import NextCors from 'nextjs-cors';
 
 const useInserMessage = () => {
-  const url = process.env.URL;
-  const router = useRouter();
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
