@@ -21,7 +21,7 @@
 	},
 	{
 		"name": "Through The Glass - Blogs Page",
-		"description": "My personal website that contains my information and projects.",
+		"description": "Blogs Page section of Through The Glass. Contains blogs about business and life. A project made for application in Through The Glass Company as Front-End Developer.",
 		"image": "TTGBlogs.png",
 		"link": "https://through-the-glass-blogs.vercel.app/Blogs",
 		"status": "open",
