@@ -40,7 +40,7 @@
 	},
 	{
 		"name": "MGH appointment website",
-		"description": "A website made for our capstone project. It contains Appointment and online consultation with three user levels for doctors, outpatients, and admin.",
+		"description": "A website made for our capstone project. Contains Appointment and online consultation with three user levels for doctors, outpatients, and admin.",
 		"image": "MGHsite.png",
 		"link": "https://leweprojects.github.io/MGHsite/",
 		"status": "open",
