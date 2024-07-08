@@ -33,12 +33,15 @@ const Portfolio: React.FC<projectProps> = ({ projects }) => {
 							justify-center select-none hover:opacity-100 [&:not(:hover)]:delay-0 delay-200 transition duration-200 scale-110 ease-in bg-black"
 			>
 				<h1 className="font-semibold uppercase">{data.name}</h1>
-				<p className="text-center project__description pb-7">{data?.description}</p>
+				<p className="text-center project__description pb-7">
+					{data?.description}
+				</p>
 				{data.status == "open" ? (
 					<Link
 						onClick={() => {
 							data.link == "/" && window.location.reload();
 						}}
+						target="_blank"
 						href={data?.link}
 						className="text-xl border-2 hover:bg-white hover:text-black hover:scale-110 transition duration-200 border-white px-2 rounded"
 					>
