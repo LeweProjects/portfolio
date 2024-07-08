@@ -19,5 +19,13 @@
 	{ "name": "PHP", "icon": "PHP-logo.png" },
 	{ "name": "Laravel", "icon": "laravel.png" },
 	{ "name": "SQLite", "icon": "1200px-Sqlite-square-icon.svg.png" },
-	{ "name": "MongoDB", "icon": "mongo.png" }
+	{ "name": "MongoDB", "icon": "mongo.png" },
+	{
+		"name": "Express.js",
+		"icon": "rapidbrains-expressjs.png"
+	},
+	{
+		"name": "Axios",
+		"icon": "57233884-20344080-6fe5-11e9-8df3-0df1282e1574.png"
+	}
 ]
