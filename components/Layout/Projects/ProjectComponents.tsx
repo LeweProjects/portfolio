@@ -33,7 +33,7 @@ const Portfolio: React.FC<projectProps> = ({ projects }) => {
 							justify-center select-none hover:opacity-100 [&:not(:hover)]:delay-0 delay-200 transition duration-200 scale-110 ease-in bg-black"
 			>
 				<h1 className="font-semibold uppercase">{data.name}</h1>
-				<p className="text-center pb-7">{data?.description}</p>
+				<p className="text-center project__description pb-7">{data?.description}</p>
 				{data.status == "open" ? (
 					<Link
 						onClick={() => {
@@ -52,7 +52,7 @@ const Portfolio: React.FC<projectProps> = ({ projects }) => {
 			</div>
 
 			<div
-				className="w-[50vh] h-[25vh] projImage bg-[length:50vh_25vh] [&:not(:hover)]:delay-200 delay-0 transition duration-150 peer-hover/project:scale-110
+				className="min-w-[50vh] min-h-[25vh] projImage bg-[length:50vh_25vh] [&:not(:hover)]:delay-200 delay-0 transition duration-150 peer-hover/project:scale-110
      						bg-no-repeat bg-white"
 				style={{
 					backgroundImage: `url(${images[data.image]?.src})`,
