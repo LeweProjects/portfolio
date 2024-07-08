@@ -21,7 +21,7 @@
 	},
 	{
 		"name": "Through The Glass - Blogs Page",
-		"description": "Blogs Page section of Through The Glass. A project made for application in Through The Glass Company as Front-End Developer.",
+		"description": "A Front-End job application project made for Through The Glass blog section page.",
 		"image": "TTGBlogs.png",
 		"link": "https://through-the-glass-blogs.vercel.app/Blogs",
 		"status": "open",
@@ -40,7 +40,7 @@
 	},
 	{
 		"name": "MGH appointment website",
-		"description": "A website made for our capstone project. Contains Appointment and online consultation with three user levels for doctors, outpatients, and admin.",
+		"description": "A website made for an Hospital's Appointment system with online Consultation.",
 		"image": "MGHsite.png",
 		"link": "https://leweprojects.github.io/MGHsite/",
 		"status": "open",
@@ -62,7 +62,7 @@
 	},
 	{
 		"name": "STImart V2",
-		"description": "This is a remake project for my first react project. An E-commerce website made for our school's proware.",
+		"description": "A remake project for my first react project. An E-commerce website a school's proware.",
 		"image": "STImart.png",
 		"status": "close",
 		"tools": [
