@@ -30,7 +30,7 @@ const useRefForInView = () => {
     amount: "all",
   });
   const isSomeProjectInView = useInView(projects, {
-    amount: "all",
+    amount: "some",
   });
   const isProjectInView = useInView(projects, {
     amount: "all",

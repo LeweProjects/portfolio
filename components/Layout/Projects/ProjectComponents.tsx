@@ -7,7 +7,7 @@ import mgh from "@/app/images/MGHsite.png";
 import portfolio from "@/app/images/portfolio.png";
 import { StaticImageData } from "next/image";
 import stimart from "@/app/images/STImart.png";
-import ttg from "@/app/images/TTGBlogs.png"
+import ttg from "@/app/images/TTGBlogs.png";
 
 type ImageMap = {
 	[key: string]: StaticImageData;
@@ -20,20 +20,38 @@ const images: ImageMap = {
 	"TTGBlogs.png": ttg,
 };
 
-const Portfolio = () => {
+interface projectProps {
+	projects: React.MutableRefObject<any>;
+}
+
+const Portfolio: React.FC<projectProps> = ({ projects }) => {
 	const { projectsArray } = useJsonMapping();
 	return projectsArray.map((data, i) => (
 		<div key={i} className="flex flex-col items-center mb-10">
 			{data.status == "open" ? (
-				<Link
-					onClick={() => {
-						data.link == "/" && window.location.reload();
-					}}
-					href={data.link}
-					className="w-[50vh] lowercase h-[25vh] projImage box absolute z-10 opacity-0 flex items-center justify-center hover:cursor-pointer text-6xl hover:opacity-100 transition duration-200 ease-in bg-black"
-				>
-					Visit
-				</Link>
+				i == 1 ? (
+					<Link
+					
+						id="projects"
+						onClick={() => {
+							data.link == "/" && window.location.reload();
+						}}
+						href={data.link}
+						className="w-[50vh] lowercase h-[25vh] projImage box absolute z-10 opacity-0 flex items-center justify-center hover:cursor-pointer text-6xl hover:opacity-100 transition duration-200 ease-in bg-black"
+					>
+						Visit
+					</Link>
+				) : (
+					<Link
+						onClick={() => {
+							data.link == "/" && window.location.reload();
+						}}
+						href={data.link}
+						className="w-[50vh] lowercase h-[25vh] projImage box absolute z-10 opacity-0 flex items-center justify-center hover:cursor-pointer text-6xl hover:opacity-100 transition duration-200 ease-in bg-black"
+					>
+						Visit
+					</Link>
+				)
 			) : (
 				<div
 					//onClick={() => window.location.reload()}
