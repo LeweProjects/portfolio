@@ -1,8 +1,6 @@
-import fs from "fs";
-import path from "path";
+import skillsJson from "@/public/json/skills.json";
+import { NextResponse } from "next/server";
 
-export function GET(request: any) {
-	let usersPath = path.join(process.cwd(), "/public/json/skills.json");
-	let file = fs.readFileSync(usersPath);
-	return new Response(file);
+export async function GET(request: any) {
+	return NextResponse.json(skillsJson);
 }
