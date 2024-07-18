@@ -242,9 +242,6 @@
   .footerTextBreak{
     @apply block -mb-3;
   }
-  /* .footerLogoSvg{
-    @apply w-[24rem]
-  } */
   .form {
     @apply w-[21rem] my-6
    }

@@ -8,6 +8,8 @@ import { StaticImageData } from "next/image";
 import stimart from "@/app/images/STImart.png";
 import ttg from "@/app/images/TTGBlogs.png";
 import nxs from "@/app/images/chartNexus.png";
+import ProjectDetailsModal from "../Modals/ProjectDetailsModal";
+import useModalFunction from "@/app/hooks/useModalFunction";
 
 type ImageMap = {
 	[key: string]: StaticImageData;
@@ -23,12 +25,25 @@ const images: ImageMap = {
 
 interface projectProps {
 	projects: React.MutableRefObject<any>;
+	data: any;
 }
 
-const Portfolio: React.FC<projectProps> = ({ projects }) => {
+const Portfolio: React.FC<projectProps> = ({ projects, data }) => {
 	const { projectsArray } = useJsonMapping();
-	return projectsArray.map((data, i) => (
-		<div id="projects" key={i} className="flex flex-col items-center mb-10">
+
+	function openModal() {
+		setProectModal(true);
+		document.documentElement.style.overflowY = "hidden";
+	}
+
+	const { isProjectModalOpen, setProectModal } = useModalFunction();
+
+	return (
+		<div id="projects" className="flex flex-col items-center mb-10">
+			{isProjectModalOpen && (
+				<ProjectDetailsModal setProectModal={setProectModal} data={data} />
+			)}
+
 			<div
 				className="w-[50vh] lowercase h-[25vh] peer/project  projImage absolute z-10 opacity-0 flex flex-col space-y-3 items-center 
 							justify-center select-none hover:opacity-100 [&:not(:hover)]:delay-0 delay-200 transition duration-200 scale-110 ease-in bg-black"
@@ -37,22 +52,30 @@ const Portfolio: React.FC<projectProps> = ({ projects }) => {
 				<p className="text-center normal-case project__description pb-7">
 					{data?.description}
 				</p>
-				{data.status == "open" ? (
-					<Link
-						onClick={() => {
-							data.link == "/" && window.location.reload();
-						}}
-						target="_blank"
-						href={data?.link}
+				<div className="flex items-center justify-around w-full">
+					<button
+						onClick={openModal}
 						className="text-xl border-2 hover:bg-white hover:text-black hover:scale-110 transition duration-200 border-white px-2 rounded"
 					>
-						visit site
-					</Link>
-				) : (
-					<div className="text-xl border-2 hover:bg-red-400 hover:text-black border-red-400 hover:scale-110 transition duration-200 px-2 rounded text-red-400 cursor-not-allowed">
-						maintenance
-					</div>
-				)}
+						details
+					</button>
+					{data.status == "open" ? (
+						<Link
+							onClick={() => {
+								data.link == "/" && window.location.reload();
+							}}
+							target="_blank"
+							href={data?.link}
+							className="text-xl border-2 hover:bg-white hover:text-black hover:scale-110 transition duration-200 border-white px-2 rounded"
+						>
+							visit site
+						</Link>
+					) : (
+						<div className="text-xl border-2 hover:bg-red-400 hover:text-black border-red-400 hover:scale-110 transition duration-200 px-2 rounded text-red-400 cursor-not-allowed">
+							maintenance
+						</div>
+					)}
+				</div>
 			</div>
 
 			<div
@@ -62,13 +85,8 @@ const Portfolio: React.FC<projectProps> = ({ projects }) => {
 					backgroundImage: `url(${images[data.image]?.src})`,
 				}}
 			></div>
-			{/* <h1 id="projects" className="mt-2 text-xl font-semibold">
-				{data?.name}
-			</h1>
-			<p className="w-[50vh] des">{data?.description}</p>
-			<MoreDetails tools={data?.tools} /> */}
 		</div>
-	));
+	);
 };
 
 export default Portfolio;
