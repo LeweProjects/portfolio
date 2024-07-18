@@ -17,7 +17,7 @@ const Projects: React.FC<headerProps> = ({ projects }) => {
 				</div>
 				<h1 className="w-fit font-semibold text-5xl">PROJECTS</h1>
 
-				<div className="projects grid grid-cols-2 w-full gap-x-8 mt-16">
+				<div className="projects grid grid-cols-3 w-full gap-x-8 mt-16">
 					<ProjectComponents projects={projects} />
 				</div>
 			</motion.div>

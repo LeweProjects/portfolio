@@ -98,6 +98,11 @@
     @apply text-[65px]
   }
 }
+@media (max-width: 1024px) {
+  .projects{
+    @apply grid-cols-2
+  }
+}
 @media (max-width: 900px) {
   .stack {
     @apply grid-cols-3;
@@ -178,7 +183,7 @@
     @apply pb-3;
   }
   .projImage {
-    @apply w-[48vh] h-[24vh] bg-[length:48vh_24vh];
+    @apply w-[48vh] h-[24vh];
   }
   .des {
     @apply text-center;
@@ -227,9 +232,6 @@
   }
   .projects {
     @apply grid-cols-1 gap-y-10;
-  }
-  .projImage {
-    @apply w-[43vh] h-[20vh] bg-[length:43vh_20vh];
   }
   .des {
     @apply text-sm w-fit;

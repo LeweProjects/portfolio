@@ -61,6 +61,25 @@
 		]
 	},
 	{
+		"name": "Stacks chart",
+		"description": "Web page that contains stack markets from API of ChartNexus.",
+		"image": "chartNexus.png",
+		"link": "https://chart-nexus-stacks-git-main-leweprojects-projects.vercel.app/?market_id=0&list=0",
+		"status": "open",
+		"tools": [
+			{ "name": "React JS", "icon": "React-icon.png" },
+			{ "name": "Node.JS", "icon": "nodejs.png" },
+			{ "name": "Next JS", "icon": "next-js-logo.png" },
+			{ "name": "JavaScript", "icon": "JavaScript.png" },
+			{ "name": "HTML5", "icon": "free-html-5-1-1175208.png" },
+			{ "name": "CSS3", "icon": "CSS3_logo.svg.png" },
+			{
+				"name": "TailwindCSS",
+				"icon": "tailwind-css-logo-5AD4175897-seeklogo.com.png"
+			}
+		]
+	},
+	{
 		"name": "STImart V2",
 		"description": "A remake project for my first react project. An E-commerce website a school's proware.",
 		"image": "STImart.png",

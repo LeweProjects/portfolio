@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import MoreDetails from "./More Details/MoreDetails";
 import useJsonMapping from "@/app/hooks/useJsonMapping";
 import mgh from "@/app/images/MGHsite.png";
 import portfolio from "@/app/images/portfolio.png";
 import { StaticImageData } from "next/image";
 import stimart from "@/app/images/STImart.png";
 import ttg from "@/app/images/TTGBlogs.png";
+import nxs from "@/app/images/chartNexus.png";
 
 type ImageMap = {
 	[key: string]: StaticImageData;
@@ -18,6 +18,7 @@ const images: ImageMap = {
 	"MGHsite.png": mgh,
 	"STImart.png": stimart,
 	"TTGBlogs.png": ttg,
+	"chartNexus.png": nxs,
 };
 
 interface projectProps {
@@ -33,7 +34,7 @@ const Portfolio: React.FC<projectProps> = ({ projects }) => {
 							justify-center select-none hover:opacity-100 [&:not(:hover)]:delay-0 delay-200 transition duration-200 scale-110 ease-in bg-black"
 			>
 				<h1 className="font-semibold uppercase">{data.name}</h1>
-				<p className="text-center project__description pb-7">
+				<p className="text-center normal-case project__description pb-7">
 					{data?.description}
 				</p>
 				{data.status == "open" ? (
