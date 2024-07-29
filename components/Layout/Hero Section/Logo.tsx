@@ -29,7 +29,7 @@ const Logo: React.FC<heroSectionProps> = ({ isLogoInView, logo }) => {
 
                 <text fill="#fff">
                     <textPath xlinkHref="#MyPath" className=" text-lg">
-                        MARVELLPORTFOLIO ★ MARVELLPORTFOLIO ★
+                        MARVELLAYON ★ DEVELOPER ★ PORTFOLIO ★
                     </textPath>
                 </text>
             </motion.svg>

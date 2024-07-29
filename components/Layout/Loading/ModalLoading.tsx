@@ -1,38 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { Suspense, useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import ModalLoading from "../Loading/ModalLoading";
 
-interface modalProps {
-	setProectModal: React.SetStateAction<any>;
-	data: any;
-	isProjectModalOpen: boolean;
+interface loadingProps {
+	closeModal: any;
 }
 
-const ProjectDetailsModal: React.FC<modalProps> = ({
-	setProectModal,
-	data,
-	isProjectModalOpen,
-}) => {
-	function closeModal() {
-		setProectModal(false);
-		document.documentElement.style.overflowY = "unset";
-	}
-
-	let tools = data.tools;
-
-	const [load, setload] = useState(false);
-
-	useEffect(() => {
-		if (data && data.image) {
-			setload(true);
-		} else {
-			setload(false);
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [isProjectModalOpen, data.image]);
-
+const ModalLoading: React.FC<loadingProps> = ({ closeModal }) => {
 	return (
 		<div className="flex justify-center items-center w-screen h-screen transition duration-150 bg-black backdrop-blur-sm bg-opacity-20 fixed inset-0 z-40">
 			<motion.div
@@ -50,26 +23,19 @@ const ProjectDetailsModal: React.FC<modalProps> = ({
 				</div>
 				<div className="modalContainer flex mt-7">
 					<div className="flex flex-col items-start w-[40rem]">
-						{load ? (
-							<Image
-								src={`/images/${data.image}`}
-								width={600}
-								height={200}
-								alt=""
-							/>
-						) : (
-							<div>loading...</div>
-						)}
-
-						<p className="mt-3 font-semibold uppercase">{data.name}</p>
-						<p className="mt-1 text-sm tracking-widest w-[30rem]">
-							{data.description}
-						</p>
+						{/* <Image
+							src={`/images/${data.image}`}
+							width={600}
+							height={200}
+							alt=""
+						/> */}
+						<p className="mt-3 font-semibold"></p>
+						<p className="mt-1 text-sm tracking-widest w-[30rem]"></p>
 					</div>
 					<div className="flex flex-col items-center">
 						<h1 className="text-2xl font-semibold">Tools used</h1>
 						<div className="grid grid-cols-3 gap-3 items-end tracking-wider">
-							{tools.map((res: any, i: any) => (
+							{/* {tools.map((res: any, i: any) => (
 								<motion.div key={i} className="flex flex-col items-center mt-3">
 									<Image
 										src={`/images/${res.icon}`}
@@ -79,9 +45,9 @@ const ProjectDetailsModal: React.FC<modalProps> = ({
 									/>
 									{res.name}
 								</motion.div>
-							))}
+							))} */}
 						</div>
-						{data.status == "open" ? (
+						{/* {data.status == "open" ? (
 							<Link
 								onClick={() => {
 									data.link == "/" && window.location.reload();
@@ -96,7 +62,7 @@ const ProjectDetailsModal: React.FC<modalProps> = ({
 							<div className="text-xl border-2 mt-10 hover:bg-red-400 hover:text-black border-red-400 hover:scale-110 transition duration-200 px-2 rounded text-red-400 cursor-not-allowed">
 								maintenance
 							</div>
-						)}
+						)} */}
 					</div>
 				</div>
 			</motion.div>
@@ -104,4 +70,4 @@ const ProjectDetailsModal: React.FC<modalProps> = ({
 	);
 };
 
-export default ProjectDetailsModal;
+export default ModalLoading;

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import useJsonMapping from "@/app/hooks/useJsonMapping";
 import mgh from "@/app/images/MGHsite.png";
 import portfolio from "@/app/images/portfolio.png";
 import { StaticImageData } from "next/image";
@@ -10,6 +9,7 @@ import ttg from "@/app/images/TTGBlogs.png";
 import nxs from "@/app/images/chartNexus.png";
 import ProjectDetailsModal from "../Modals/ProjectDetailsModal";
 import useModalFunction from "@/app/hooks/useModalFunction";
+import ModalLoading from "../Loading/ModalLoading";
 
 type ImageMap = {
 	[key: string]: StaticImageData;
@@ -29,8 +29,6 @@ interface projectProps {
 }
 
 const Portfolio: React.FC<projectProps> = ({ projects, data }) => {
-	const { projectsArray } = useJsonMapping();
-
 	function openModal() {
 		setProectModal(true);
 		document.documentElement.style.overflowY = "hidden";
@@ -41,7 +39,14 @@ const Portfolio: React.FC<projectProps> = ({ projects, data }) => {
 	return (
 		<div id="projects" className="flex flex-col items-center mb-10">
 			{isProjectModalOpen && (
-				<ProjectDetailsModal setProectModal={setProectModal} data={data} />
+				<>
+					<ProjectDetailsModal
+						isProjectModalOpen={isProjectModalOpen}
+						setProectModal={setProectModal}
+						data={data}
+					/>
+					{/* <ModalLoading setProectModal={setProectModal} /> */}
+				</>
 			)}
 
 			<div
